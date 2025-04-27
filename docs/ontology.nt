@@ -1,0 +1,2036 @@
+<https://w3id.org/example#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/example#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/example/1.0.1> .
+<https://w3id.org/example#> <http://purl.org/dc/terms/contributor> <https://w3id.org/people#AContributorURI> .
+<https://w3id.org/example#> <http://purl.org/dc/terms/created> "2025-04-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/example#> <http://purl.org/dc/terms/creator> <https://w3id.org/people#AuthorURI> .
+<https://w3id.org/example#> <http://purl.org/dc/terms/description> "Ontology for planning and recommending tourist activities."@en .
+<https://w3id.org/example#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/example#> <http://purl.org/dc/terms/title> "The Intel-Tour ontology"@en .
+<https://w3id.org/example#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "choosenprefix" .
+<https://w3id.org/example#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/example#> .
+<https://w3id.org/example#> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/example/1.0.0> .
+<https://w3id.org/example#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+<https://w3id.org/example#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#priorVersion
+<http://www.w3.org/2002/07/owl#priorVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionIRI
+<http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property for version IRI." .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/def/base#attractionIn
+<http://example.org/def/base#attractionIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#attractionIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Attraction> .
+<http://example.org/def/base#attractionIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionIn> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionName> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionType> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#City> .
+<http://example.org/def/base#attractionIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#attractionIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an attraction and a city." .
+<http://example.org/def/base#attractionIn> <http://www.w3.org/2000/01/rdf-schema#label> "attractionIn" .
+# 
+# http://example.org/def/base#attractionReview
+<http://example.org/def/base#attractionReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#attractionReview> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Attraction> .
+<http://example.org/def/base#attractionReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionIn> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionName> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionType> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionReview> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Review> .
+<http://example.org/def/base#attractionReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an attraction and a review." .
+<http://example.org/def/base#attractionReview> <http://www.w3.org/2000/01/rdf-schema#label> "attractionReview" .
+# 
+# http://example.org/def/base#eventIn
+<http://example.org/def/base#eventIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#eventIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Event> .
+<http://example.org/def/base#eventIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventIn> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventDate> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventName> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventType> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#City> .
+<http://example.org/def/base#eventIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#eventIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an event and a city." .
+<http://example.org/def/base#eventIn> <http://www.w3.org/2000/01/rdf-schema#label> "eventIn" .
+# 
+# http://example.org/def/base#eventReview
+<http://example.org/def/base#eventReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Event> .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventIn> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventDate> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventName> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventType> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Review> .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an event and a review." .
+<http://example.org/def/base#eventReview> <http://www.w3.org/2000/01/rdf-schema#label> "eventReview" .
+# 
+# http://example.org/def/base#hasAttraction
+<http://example.org/def/base#hasAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#City> .
+<http://example.org/def/base#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Attraction> .
+<http://example.org/def/base#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#range> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionIn> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#range> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionName> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#range> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionType> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a city and an attraction." .
+<http://example.org/def/base#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "hasAttraction" .
+# 
+# http://example.org/def/base#hasEvent
+<http://example.org/def/base#hasEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#City> .
+<http://example.org/def/base#hasEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#hasEvent> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasEvent> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Event> .
+<http://example.org/def/base#hasEvent> <http://www.w3.org/2000/01/rdf-schema#range> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventIn> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasEvent> <http://www.w3.org/2000/01/rdf-schema#range> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventDate> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasEvent> <http://www.w3.org/2000/01/rdf-schema#range> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventName> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasEvent> <http://www.w3.org/2000/01/rdf-schema#range> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventType> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a city and an event." .
+<http://example.org/def/base#hasEvent> <http://www.w3.org/2000/01/rdf-schema#label> "hasEvent" .
+# 
+# http://example.org/def/base#hasHotel
+<http://example.org/def/base#hasHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#City> .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Hotel> .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/dbo#Hotel> .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#range> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelIn> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#range> _:genid43 .
+_:genid43 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelName> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#range> _:genid44 .
+_:genid44 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelNightPrice> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#range> _:genid45 .
+_:genid45 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelStars> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#range> _:genid46 .
+_:genid46 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelType> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a city and a hotel." .
+<http://example.org/def/base#hasHotel> <http://www.w3.org/2000/01/rdf-schema#label> "hasHotel" .
+# 
+# http://example.org/def/base#hasRestaurant
+<http://example.org/def/base#hasRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#City> .
+<http://example.org/def/base#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid48 .
+_:genid48 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Restaurant> .
+<http://example.org/def/base#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#range> _:genid49 .
+_:genid49 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantIn> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#range> _:genid50 .
+_:genid50 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#servesCousine> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#range> _:genid51 .
+_:genid51 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantAvgPrice> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#range> _:genid52 .
+_:genid52 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantName> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a city and a restaurant." .
+<http://example.org/def/base#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "hasRestaurant" .
+# 
+# http://example.org/def/base#hasSummary
+<http://example.org/def/base#hasSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasSummary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#IntelTour> .
+<http://example.org/def/base#hasSummary> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid53 .
+_:genid53 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hasSummary> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasSummary> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid54 .
+_:genid54 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#refersToCity> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasSummary> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Summary> .
+<http://example.org/def/base#hasSummary> <http://www.w3.org/2000/01/rdf-schema#range> _:genid55 .
+_:genid55 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#Review> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#includes> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasSummary> <http://www.w3.org/2000/01/rdf-schema#range> _:genid56 .
+_:genid56 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#includes> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasSummary> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an intelligent tour and a summary." .
+<http://example.org/def/base#hasSummary> <http://www.w3.org/2000/01/rdf-schema#label> "hasSummary" .
+# 
+# http://example.org/def/base#hasTransport
+<http://example.org/def/base#hasTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasTransport> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#City> .
+<http://example.org/def/base#hasTransport> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#hasTransport> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid57 .
+_:genid57 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasTransport> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid58 .
+_:genid58 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasTransport> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Transport> .
+<http://example.org/def/base#hasTransport> <http://www.w3.org/2000/01/rdf-schema#range> _:genid59 .
+_:genid59 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportIn> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasTransport> <http://www.w3.org/2000/01/rdf-schema#range> _:genid60 .
+_:genid60 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportAvgPrice> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasTransport> <http://www.w3.org/2000/01/rdf-schema#range> _:genid61 .
+_:genid61 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportProvider> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasTransport> <http://www.w3.org/2000/01/rdf-schema#range> _:genid62 .
+_:genid62 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportType> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hasTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a city and a transport." .
+<http://example.org/def/base#hasTransport> <http://www.w3.org/2000/01/rdf-schema#label> "hasTransport" .
+# 
+# http://example.org/def/base#hotelIn
+<http://example.org/def/base#hotelIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Hotel> .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#Hotel> .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid63 .
+_:genid63 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelIn> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid64 .
+_:genid64 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelName> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid65 .
+_:genid65 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelNightPrice> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid66 .
+_:genid66 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelStars> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid67 .
+_:genid67 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelType> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#City> .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid68 .
+_:genid68 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid69 .
+_:genid69 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a hotel and a city." .
+<http://example.org/def/base#hotelIn> <http://www.w3.org/2000/01/rdf-schema#label> "hotelIn" .
+# 
+# http://example.org/def/base#hotelReview
+<http://example.org/def/base#hotelReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Hotel> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#Hotel> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid70 .
+_:genid70 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelIn> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid71 .
+_:genid71 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelName> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid72 .
+_:genid72 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelNightPrice> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid73 .
+_:genid73 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelStars> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid74 .
+_:genid74 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid74 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelType> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Review> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid75 .
+_:genid75 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid75 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid76 .
+_:genid76 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid76 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid77 .
+_:genid77 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid77 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid78 .
+_:genid78 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid78 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid79 .
+_:genid79 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid79 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a hotel and a review." .
+<http://example.org/def/base#hotelReview> <http://www.w3.org/2000/01/rdf-schema#label> "hotelReview" .
+# 
+# http://example.org/def/base#includes
+<http://example.org/def/base#includes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#includes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Summary> .
+<http://example.org/def/base#includes> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid80 .
+_:genid80 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#Review> .
+_:genid80 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#includes> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#includes> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid81 .
+_:genid81 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid81 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#includes> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#includes> <http://www.w3.org/2000/01/rdf-schema#range> _:genid82 .
+_:genid82 <http://www.w3.org/2002/07/owl#unionOf> _:genid87 .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid86 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid83 .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#TransportReview> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#RestaurantReview> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#HotelReview> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#EventReview> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#AttractionReview> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#includes> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a summary and the included reviews." .
+<http://example.org/def/base#includes> <http://www.w3.org/2000/01/rdf-schema#label> "includes" .
+# 
+# http://example.org/def/base#refersToCity
+<http://example.org/def/base#refersToCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#refersToCity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#IntelTour> .
+<http://example.org/def/base#refersToCity> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid88 .
+_:genid88 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid88 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hasSummary> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#refersToCity> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid89 .
+_:genid89 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid89 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#refersToCity> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#refersToCity> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#City> .
+<http://example.org/def/base#refersToCity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#refersToCity> <http://www.w3.org/2000/01/rdf-schema#range> _:genid90 .
+_:genid90 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid90 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#refersToCity> <http://www.w3.org/2000/01/rdf-schema#range> _:genid91 .
+_:genid91 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid91 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#refersToCity> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an intelligent tour and a city." .
+<http://example.org/def/base#refersToCity> <http://www.w3.org/2000/01/rdf-schema#label> "refersToCity" .
+# 
+# http://example.org/def/base#restaurantIn
+<http://example.org/def/base#restaurantIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#restaurantIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Restaurant> .
+<http://example.org/def/base#restaurantIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid92 .
+_:genid92 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid92 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantIn> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid93 .
+_:genid93 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid93 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#servesCousine> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid94 .
+_:genid94 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid94 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantAvgPrice> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid95 .
+_:genid95 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid95 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantName> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#City> .
+<http://example.org/def/base#restaurantIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#restaurantIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid96 .
+_:genid96 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid96 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid97 .
+_:genid97 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid97 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a restaurant and a city." .
+<http://example.org/def/base#restaurantIn> <http://www.w3.org/2000/01/rdf-schema#label> "restaurantIn" .
+# 
+# http://example.org/def/base#restaurantReview
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Restaurant> .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid98 .
+_:genid98 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid98 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantIn> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid99 .
+_:genid99 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid99 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#servesCousine> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid100 .
+_:genid100 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid100 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantAvgPrice> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid101 .
+_:genid101 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid101 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantName> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Review> .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid102 .
+_:genid102 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid102 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid103 .
+_:genid103 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid103 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid104 .
+_:genid104 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid104 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid105 .
+_:genid105 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid105 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid106 .
+_:genid106 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid106 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a restaurant and a review." .
+<http://example.org/def/base#restaurantReview> <http://www.w3.org/2000/01/rdf-schema#label> "restaurantReview" .
+# 
+# http://example.org/def/base#servesCousine
+<http://example.org/def/base#servesCousine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#servesCousine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Restaurant> .
+<http://example.org/def/base#servesCousine> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid107 .
+_:genid107 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid107 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantIn> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#servesCousine> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid108 .
+_:genid108 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid108 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#servesCousine> .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#servesCousine> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid109 .
+_:genid109 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid109 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantAvgPrice> .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#servesCousine> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid110 .
+_:genid110 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid110 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantName> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#servesCousine> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Cousine> .
+<http://example.org/def/base#servesCousine> <http://www.w3.org/2000/01/rdf-schema#range> _:genid111 .
+_:genid111 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid111 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cousineName> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#servesCousine> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a restaurant and the type of cuisine it serves." .
+<http://example.org/def/base#servesCousine> <http://www.w3.org/2000/01/rdf-schema#label> "servesCousine" .
+# 
+# http://example.org/def/base#transportIn
+<http://example.org/def/base#transportIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#transportIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Transport> .
+<http://example.org/def/base#transportIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid112 .
+_:genid112 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid112 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportIn> .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid113 .
+_:genid113 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid113 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportAvgPrice> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid114 .
+_:genid114 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid114 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportProvider> .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid115 .
+_:genid115 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid115 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportType> .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#City> .
+<http://example.org/def/base#transportIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#transportIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid116 .
+_:genid116 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid116 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid117 .
+_:genid117 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid117 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a transport and a city." .
+<http://example.org/def/base#transportIn> <http://www.w3.org/2000/01/rdf-schema#label> "transportIn" .
+# 
+# http://example.org/def/base#transportReview
+<http://example.org/def/base#transportReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Transport> .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid118 .
+_:genid118 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid118 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportIn> .
+_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid119 .
+_:genid119 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid119 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportAvgPrice> .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid120 .
+_:genid120 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid120 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportProvider> .
+_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid121 .
+_:genid121 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid121 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportType> .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Review> .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid122 .
+_:genid122 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid122 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid123 .
+_:genid123 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid123 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid124 .
+_:genid124 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid124 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid125 .
+_:genid125 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid125 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#range> _:genid126 .
+_:genid126 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid126 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a transport and a review." .
+<http://example.org/def/base#transportReview> <http://www.w3.org/2000/01/rdf-schema#label> "transportReview" .
+# 
+# http://example.org/def/base#writtenBy
+<http://example.org/def/base#writtenBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#writtenBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Review> .
+<http://example.org/def/base#writtenBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid127 .
+_:genid127 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid127 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#writtenBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid128 .
+_:genid128 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid128 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid128 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#writtenBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid129 .
+_:genid129 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid129 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid129 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#writtenBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid130 .
+_:genid130 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid130 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#writtenBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid131 .
+_:genid131 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid131 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#writtenBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Reviewer> .
+<http://example.org/def/base#writtenBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/foaf#Person> .
+<http://example.org/def/base#writtenBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a review and its author." .
+<http://example.org/def/base#writtenBy> <http://www.w3.org/2000/01/rdf-schema#label> "writtenBy" .
+# 
+# http://example.org/def/base#writtenOn
+<http://example.org/def/base#writtenOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#writtenOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Review> .
+<http://example.org/def/base#writtenOn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid132 .
+_:genid132 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid132 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#writtenOn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid133 .
+_:genid133 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid133 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid133 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#writtenOn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid134 .
+_:genid134 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid134 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#writtenOn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid135 .
+_:genid135 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid135 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid135 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#writtenOn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid136 .
+_:genid136 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid136 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#writtenOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Date> .
+<http://example.org/def/base#writtenOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a review and the date it was written." .
+<http://example.org/def/base#writtenOn> <http://www.w3.org/2000/01/rdf-schema#label> "writtenOn" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/def/base#attractionName
+<http://example.org/def/base#attractionName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#attractionName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Attraction> .
+<http://example.org/def/base#attractionName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid137 .
+_:genid137 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid137 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionIn> .
+_:genid137 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid138 .
+_:genid138 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid138 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionName> .
+_:genid138 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid139 .
+_:genid139 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid139 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionType> .
+_:genid139 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#attractionName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the attraction." .
+<http://example.org/def/base#attractionName> <http://www.w3.org/2000/01/rdf-schema#label> "attractionName" .
+# 
+# http://example.org/def/base#attractionType
+<http://example.org/def/base#attractionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#attractionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Attraction> .
+<http://example.org/def/base#attractionType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid140 .
+_:genid140 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid140 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionIn> .
+_:genid140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid141 .
+_:genid141 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid141 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionName> .
+_:genid141 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid142 .
+_:genid142 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid142 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionType> .
+_:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attractionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#attractionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of the attraction." .
+<http://example.org/def/base#attractionType> <http://www.w3.org/2000/01/rdf-schema#label> "attractionType" .
+# 
+# http://example.org/def/base#cityGeoLocation
+<http://example.org/def/base#cityGeoLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#cityGeoLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#City> .
+<http://example.org/def/base#cityGeoLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#cityGeoLocation> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid143 .
+_:genid143 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid143 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#cityGeoLocation> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid144 .
+_:genid144 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid144 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#cityGeoLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#cityGeoLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Geographical location of the city." .
+<http://example.org/def/base#cityGeoLocation> <http://www.w3.org/2000/01/rdf-schema#label> "cityGeoLocation" .
+# 
+# http://example.org/def/base#cityName
+<http://example.org/def/base#cityName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#cityName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#City> .
+<http://example.org/def/base#cityName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#cityName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid145 .
+_:genid145 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid145 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid145 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#cityName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid146 .
+_:genid146 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid146 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid146 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#cityName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#cityName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the city." .
+<http://example.org/def/base#cityName> <http://www.w3.org/2000/01/rdf-schema#label> "cityName" .
+# 
+# http://example.org/def/base#comment
+<http://example.org/def/base#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#comment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Review> .
+<http://example.org/def/base#comment> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid147 .
+_:genid147 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid147 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid147 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#comment> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid148 .
+_:genid148 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid148 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid148 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#comment> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid149 .
+_:genid149 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid149 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid149 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#comment> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid150 .
+_:genid150 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid150 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid150 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#comment> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid151 .
+_:genid151 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid151 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#comment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#comment> <http://www.w3.org/2000/01/rdf-schema#comment> "Comment of the review." .
+<http://example.org/def/base#comment> <http://www.w3.org/2000/01/rdf-schema#label> "comment" .
+# 
+# http://example.org/def/base#cousineName
+<http://example.org/def/base#cousineName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#cousineName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Cousine> .
+<http://example.org/def/base#cousineName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid152 .
+_:genid152 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid152 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cousineName> .
+_:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#cousineName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#cousineName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the cuisine." .
+<http://example.org/def/base#cousineName> <http://www.w3.org/2000/01/rdf-schema#label> "cousineName" .
+# 
+# http://example.org/def/base#eventDate
+<http://example.org/def/base#eventDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#eventDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Event> .
+<http://example.org/def/base#eventDate> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid153 .
+_:genid153 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid153 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventIn> .
+_:genid153 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventDate> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid154 .
+_:genid154 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid154 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventDate> .
+_:genid154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventDate> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid155 .
+_:genid155 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid155 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventName> .
+_:genid155 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventDate> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid156 .
+_:genid156 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid156 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventType> .
+_:genid156 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/def/base#eventDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of the event." .
+<http://example.org/def/base#eventDate> <http://www.w3.org/2000/01/rdf-schema#label> "eventDate" .
+# 
+# http://example.org/def/base#eventName
+<http://example.org/def/base#eventName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#eventName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Event> .
+<http://example.org/def/base#eventName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid157 .
+_:genid157 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid157 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventIn> .
+_:genid157 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid158 .
+_:genid158 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid158 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventDate> .
+_:genid158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid159 .
+_:genid159 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid159 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventName> .
+_:genid159 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid160 .
+_:genid160 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid160 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventType> .
+_:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#eventName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the event." .
+<http://example.org/def/base#eventName> <http://www.w3.org/2000/01/rdf-schema#label> "eventName" .
+# 
+# http://example.org/def/base#eventType
+<http://example.org/def/base#eventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#eventType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Event> .
+<http://example.org/def/base#eventType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid161 .
+_:genid161 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid161 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventIn> .
+_:genid161 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid162 .
+_:genid162 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid162 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventDate> .
+_:genid162 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid163 .
+_:genid163 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid163 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventName> .
+_:genid163 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid164 .
+_:genid164 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid164 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventType> .
+_:genid164 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#eventType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#eventType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of the event." .
+<http://example.org/def/base#eventType> <http://www.w3.org/2000/01/rdf-schema#label> "eventType" .
+# 
+# http://example.org/def/base#hotelName
+<http://example.org/def/base#hotelName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#hotelName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Hotel> .
+<http://example.org/def/base#hotelName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#Hotel> .
+<http://example.org/def/base#hotelName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid165 .
+_:genid165 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid165 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelIn> .
+_:genid165 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid166 .
+_:genid166 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid166 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelName> .
+_:genid166 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid167 .
+_:genid167 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid167 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelNightPrice> .
+_:genid167 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid168 .
+_:genid168 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid168 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelStars> .
+_:genid168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid169 .
+_:genid169 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid169 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelType> .
+_:genid169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#hotelName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the hotel." .
+<http://example.org/def/base#hotelName> <http://www.w3.org/2000/01/rdf-schema#label> "hotelName" .
+# 
+# http://example.org/def/base#hotelNightPrice
+<http://example.org/def/base#hotelNightPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#hotelNightPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Hotel> .
+<http://example.org/def/base#hotelNightPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#Hotel> .
+<http://example.org/def/base#hotelNightPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid170 .
+_:genid170 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid170 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelIn> .
+_:genid170 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelNightPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid171 .
+_:genid171 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid171 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelName> .
+_:genid171 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelNightPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid172 .
+_:genid172 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid172 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelNightPrice> .
+_:genid172 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelNightPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid173 .
+_:genid173 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid173 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelStars> .
+_:genid173 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelNightPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid174 .
+_:genid174 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid174 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelType> .
+_:genid174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelNightPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://example.org/def/base#hotelNightPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Nightly price of the hotel." .
+<http://example.org/def/base#hotelNightPrice> <http://www.w3.org/2000/01/rdf-schema#label> "hotelNightPrice" .
+# 
+# http://example.org/def/base#hotelStars
+<http://example.org/def/base#hotelStars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#hotelStars> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Hotel> .
+<http://example.org/def/base#hotelStars> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#Hotel> .
+<http://example.org/def/base#hotelStars> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid175 .
+_:genid175 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid175 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelIn> .
+_:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelStars> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid176 .
+_:genid176 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid176 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelName> .
+_:genid176 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelStars> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid177 .
+_:genid177 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid177 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelNightPrice> .
+_:genid177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelStars> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid178 .
+_:genid178 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid178 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelStars> .
+_:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelStars> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid179 .
+_:genid179 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid179 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelType> .
+_:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelStars> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/def/base#hotelStars> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of stars of the hotel." .
+<http://example.org/def/base#hotelStars> <http://www.w3.org/2000/01/rdf-schema#label> "hotelStars" .
+# 
+# http://example.org/def/base#hotelType
+<http://example.org/def/base#hotelType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#hotelType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Hotel> .
+<http://example.org/def/base#hotelType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dbo#Hotel> .
+<http://example.org/def/base#hotelType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid180 .
+_:genid180 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid180 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelIn> .
+_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid181 .
+_:genid181 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid181 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelName> .
+_:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid182 .
+_:genid182 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid182 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelNightPrice> .
+_:genid182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid183 .
+_:genid183 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid183 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelStars> .
+_:genid183 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid184 .
+_:genid184 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid184 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelType> .
+_:genid184 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotelType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#hotelType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of the hotel." .
+<http://example.org/def/base#hotelType> <http://www.w3.org/2000/01/rdf-schema#label> "hotelType" .
+# 
+# http://example.org/def/base#rating
+<http://example.org/def/base#rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#rating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Review> .
+<http://example.org/def/base#rating> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid185 .
+_:genid185 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid185 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid185 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#rating> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid186 .
+_:genid186 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid186 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#rating> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid187 .
+_:genid187 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid187 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#rating> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid188 .
+_:genid188 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid188 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid188 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#rating> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid189 .
+_:genid189 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid189 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid189 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#rating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/def/base#rating> <http://www.w3.org/2000/01/rdf-schema#comment> "Rating of the review." .
+<http://example.org/def/base#rating> <http://www.w3.org/2000/01/rdf-schema#label> "rating" .
+# 
+# http://example.org/def/base#restaurantAvgPrice
+<http://example.org/def/base#restaurantAvgPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#restaurantAvgPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Restaurant> .
+<http://example.org/def/base#restaurantAvgPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid190 .
+_:genid190 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid190 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantIn> .
+_:genid190 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantAvgPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid191 .
+_:genid191 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid191 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#servesCousine> .
+_:genid191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantAvgPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid192 .
+_:genid192 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid192 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantAvgPrice> .
+_:genid192 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantAvgPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid193 .
+_:genid193 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid193 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantName> .
+_:genid193 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantAvgPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://example.org/def/base#restaurantAvgPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Average price of the restaurant." .
+<http://example.org/def/base#restaurantAvgPrice> <http://www.w3.org/2000/01/rdf-schema#label> "restaurantAvgPrice" .
+# 
+# http://example.org/def/base#restaurantName
+<http://example.org/def/base#restaurantName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#restaurantName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Restaurant> .
+<http://example.org/def/base#restaurantName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid194 .
+_:genid194 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid194 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantIn> .
+_:genid194 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid195 .
+_:genid195 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid195 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#servesCousine> .
+_:genid195 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid196 .
+_:genid196 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid196 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantAvgPrice> .
+_:genid196 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid197 .
+_:genid197 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid197 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantName> .
+_:genid197 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurantName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#restaurantName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the restaurant." .
+<http://example.org/def/base#restaurantName> <http://www.w3.org/2000/01/rdf-schema#label> "restaurantName" .
+# 
+# http://example.org/def/base#transportAvgPrice
+<http://example.org/def/base#transportAvgPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#transportAvgPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Transport> .
+<http://example.org/def/base#transportAvgPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid198 .
+_:genid198 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid198 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportIn> .
+_:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportAvgPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid199 .
+_:genid199 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid199 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportAvgPrice> .
+_:genid199 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportAvgPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid200 .
+_:genid200 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid200 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportProvider> .
+_:genid200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportAvgPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid201 .
+_:genid201 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid201 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportType> .
+_:genid201 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportAvgPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://example.org/def/base#transportAvgPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Average price of the transport." .
+<http://example.org/def/base#transportAvgPrice> <http://www.w3.org/2000/01/rdf-schema#label> "transportAvgPrice" .
+# 
+# http://example.org/def/base#transportProvider
+<http://example.org/def/base#transportProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#transportProvider> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Transport> .
+<http://example.org/def/base#transportProvider> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid202 .
+_:genid202 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid202 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportIn> .
+_:genid202 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportProvider> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid203 .
+_:genid203 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid203 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportAvgPrice> .
+_:genid203 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportProvider> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid204 .
+_:genid204 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid204 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportProvider> .
+_:genid204 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportProvider> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid205 .
+_:genid205 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid205 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportType> .
+_:genid205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportProvider> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#transportProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "Provider of the transport." .
+<http://example.org/def/base#transportProvider> <http://www.w3.org/2000/01/rdf-schema#label> "transportProvider" .
+# 
+# http://example.org/def/base#transportType
+<http://example.org/def/base#transportType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#transportType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Transport> .
+<http://example.org/def/base#transportType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid206 .
+_:genid206 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid206 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportIn> .
+_:genid206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid207 .
+_:genid207 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid207 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportAvgPrice> .
+_:genid207 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid208 .
+_:genid208 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid208 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportProvider> .
+_:genid208 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid209 .
+_:genid209 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid209 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportType> .
+_:genid209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#transportType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#transportType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of the transport." .
+<http://example.org/def/base#transportType> <http://www.w3.org/2000/01/rdf-schema#label> "transportType" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://example.org/def/base#Andalussian
+<http://example.org/def/base#Andalussian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Andalussian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Cousine> .
+<http://example.org/def/base#Andalussian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid210 .
+_:genid210 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid210 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cousineName> .
+_:genid210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Andalussian> <http://www.w3.org/2000/01/rdf-schema#comment> "Andalusian cuisine." .
+<http://example.org/def/base#Andalussian> <http://www.w3.org/2000/01/rdf-schema#label> "Andalussian" .
+# 
+# http://example.org/def/base#Attraction
+<http://example.org/def/base#Attraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Attraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid211 .
+_:genid211 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid211 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionIn> .
+_:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Attraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid212 .
+_:genid212 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid212 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionName> .
+_:genid212 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Attraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid213 .
+_:genid213 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid213 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionType> .
+_:genid213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Attraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Tourist attraction." .
+<http://example.org/def/base#Attraction> <http://www.w3.org/2000/01/rdf-schema#label> "Attraction" .
+# 
+# http://example.org/def/base#AttractionReview
+<http://example.org/def/base#AttractionReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#AttractionReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Review> .
+<http://example.org/def/base#AttractionReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid214 .
+_:genid214 <http://www.w3.org/2002/07/owl#unionOf> _:genid219 .
+_:genid219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid218 .
+_:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid217 .
+_:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid216 .
+_:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid215 .
+_:genid215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#TransportReview> .
+_:genid215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#RestaurantReview> .
+_:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#HotelReview> .
+_:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#EventReview> .
+_:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#AttractionReview> .
+_:genid219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid214 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#AttractionReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid220 .
+_:genid220 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid220 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#AttractionReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid221 .
+_:genid221 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid221 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#AttractionReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid222 .
+_:genid222 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid222 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#AttractionReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid223 .
+_:genid223 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid223 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#AttractionReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid224 .
+_:genid224 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid224 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#AttractionReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Review of an attraction." .
+<http://example.org/def/base#AttractionReview> <http://www.w3.org/2000/01/rdf-schema#label> "AttractionReview" .
+# 
+# http://example.org/def/base#City
+<http://example.org/def/base#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid225 .
+_:genid225 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid225 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid225 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid226 .
+_:genid226 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid226 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid226 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#City> <http://www.w3.org/2000/01/rdf-schema#comment> "City." .
+<http://example.org/def/base#City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+# 
+# http://example.org/def/base#Cousine
+<http://example.org/def/base#Cousine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Cousine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid227 .
+_:genid227 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid227 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cousineName> .
+_:genid227 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Cousine> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of cuisine." .
+<http://example.org/def/base#Cousine> <http://www.w3.org/2000/01/rdf-schema#label> "Cousine" .
+# 
+# http://example.org/def/base#Date
+<http://example.org/def/base#Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Date> <http://www.w3.org/2000/01/rdf-schema#comment> "Date." .
+<http://example.org/def/base#Date> <http://www.w3.org/2000/01/rdf-schema#label> "Date" .
+# 
+# http://example.org/def/base#Event
+<http://example.org/def/base#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid228 .
+_:genid228 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid228 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventIn> .
+_:genid228 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid229 .
+_:genid229 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid229 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventDate> .
+_:genid229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid230 .
+_:genid230 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid230 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventName> .
+_:genid230 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid231 .
+_:genid231 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid231 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventType> .
+_:genid231 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Event." .
+<http://example.org/def/base#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
+# 
+# http://example.org/def/base#EventReview
+<http://example.org/def/base#EventReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#EventReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Review> .
+<http://example.org/def/base#EventReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid232 .
+_:genid232 <http://www.w3.org/2002/07/owl#unionOf> _:genid237 .
+_:genid237 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid236 .
+_:genid236 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid235 .
+_:genid235 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid234 .
+_:genid234 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid233 .
+_:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#TransportReview> .
+_:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid234 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#RestaurantReview> .
+_:genid234 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid235 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#HotelReview> .
+_:genid235 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid236 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#EventReview> .
+_:genid236 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid237 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#AttractionReview> .
+_:genid237 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid232 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#EventReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid238 .
+_:genid238 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid238 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#EventReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid239 .
+_:genid239 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid239 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid239 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#EventReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid240 .
+_:genid240 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid240 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid240 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#EventReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid241 .
+_:genid241 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid241 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid241 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#EventReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid242 .
+_:genid242 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid242 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid242 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#EventReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Review of an event." .
+<http://example.org/def/base#EventReview> <http://www.w3.org/2000/01/rdf-schema#label> "EventReview" .
+# 
+# http://example.org/def/base#Hotel
+<http://example.org/def/base#Hotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dbo#Hotel> .
+<http://example.org/def/base#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid243 .
+_:genid243 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid243 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelIn> .
+_:genid243 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid244 .
+_:genid244 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid244 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelName> .
+_:genid244 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid245 .
+_:genid245 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid245 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelNightPrice> .
+_:genid245 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid246 .
+_:genid246 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid246 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelStars> .
+_:genid246 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid247 .
+_:genid247 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid247 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelType> .
+_:genid247 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Hotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Hotel." .
+<http://example.org/def/base#Hotel> <http://www.w3.org/2000/01/rdf-schema#label> "Hotel" .
+# 
+# http://example.org/def/base#HotelReview
+<http://example.org/def/base#HotelReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#HotelReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Review> .
+<http://example.org/def/base#HotelReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid248 .
+_:genid248 <http://www.w3.org/2002/07/owl#unionOf> _:genid253 .
+_:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid252 .
+_:genid252 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid251 .
+_:genid251 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid250 .
+_:genid250 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid249 .
+_:genid249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#TransportReview> .
+_:genid249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid250 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#RestaurantReview> .
+_:genid250 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid251 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#HotelReview> .
+_:genid251 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid252 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#EventReview> .
+_:genid252 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#AttractionReview> .
+_:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid248 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#HotelReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid254 .
+_:genid254 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid254 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid254 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#HotelReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid255 .
+_:genid255 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid255 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid255 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#HotelReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid256 .
+_:genid256 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid256 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid256 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#HotelReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid257 .
+_:genid257 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid257 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid257 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#HotelReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid258 .
+_:genid258 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid258 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid258 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#HotelReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Review of a hotel." .
+<http://example.org/def/base#HotelReview> <http://www.w3.org/2000/01/rdf-schema#label> "HotelReview" .
+# 
+# http://example.org/def/base#IntelTour
+<http://example.org/def/base#IntelTour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#IntelTour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid259 .
+_:genid259 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid259 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hasSummary> .
+_:genid259 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#IntelTour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid260 .
+_:genid260 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid260 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#refersToCity> .
+_:genid260 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#IntelTour> <http://www.w3.org/2000/01/rdf-schema#comment> "Intelligent tour." .
+<http://example.org/def/base#IntelTour> <http://www.w3.org/2000/01/rdf-schema#label> "IntelTour" .
+# 
+# http://example.org/def/base#Italian
+<http://example.org/def/base#Italian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Italian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Cousine> .
+<http://example.org/def/base#Italian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid261 .
+_:genid261 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid261 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cousineName> .
+_:genid261 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Italian> <http://www.w3.org/2000/01/rdf-schema#comment> "Italian cuisine." .
+<http://example.org/def/base#Italian> <http://www.w3.org/2000/01/rdf-schema#label> "Italian" .
+# 
+# http://example.org/def/base#Japanese
+<http://example.org/def/base#Japanese> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Japanese> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Cousine> .
+<http://example.org/def/base#Japanese> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid262 .
+_:genid262 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid262 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cousineName> .
+_:genid262 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Japanese> <http://www.w3.org/2000/01/rdf-schema#comment> "Japanese cuisine." .
+<http://example.org/def/base#Japanese> <http://www.w3.org/2000/01/rdf-schema#label> "Japanese" .
+# 
+# http://example.org/def/base#Mediterranean
+<http://example.org/def/base#Mediterranean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Mediterranean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Cousine> .
+<http://example.org/def/base#Mediterranean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid263 .
+_:genid263 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid263 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cousineName> .
+_:genid263 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Mediterranean> <http://www.w3.org/2000/01/rdf-schema#comment> "Mediterranean cuisine." .
+<http://example.org/def/base#Mediterranean> <http://www.w3.org/2000/01/rdf-schema#label> "Mediterranean" .
+# 
+# http://example.org/def/base#Mexican
+<http://example.org/def/base#Mexican> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Mexican> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Cousine> .
+<http://example.org/def/base#Mexican> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid264 .
+_:genid264 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid264 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cousineName> .
+_:genid264 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Mexican> <http://www.w3.org/2000/01/rdf-schema#comment> "Mexican cuisine." .
+<http://example.org/def/base#Mexican> <http://www.w3.org/2000/01/rdf-schema#label> "Mexican" .
+# 
+# http://example.org/def/base#Restaurant
+<http://example.org/def/base#Restaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid265 .
+_:genid265 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid265 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantIn> .
+_:genid265 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid266 .
+_:genid266 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid266 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#servesCousine> .
+_:genid266 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid267 .
+_:genid267 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid267 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantAvgPrice> .
+_:genid267 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid268 .
+_:genid268 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid268 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantName> .
+_:genid268 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Restaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "Restaurant." .
+<http://example.org/def/base#Restaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Restaurant" .
+# 
+# http://example.org/def/base#RestaurantReview
+<http://example.org/def/base#RestaurantReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#RestaurantReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Review> .
+<http://example.org/def/base#RestaurantReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid269 .
+_:genid269 <http://www.w3.org/2002/07/owl#unionOf> _:genid274 .
+_:genid274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid273 .
+_:genid273 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid272 .
+_:genid272 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid271 .
+_:genid271 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid270 .
+_:genid270 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid270 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#TransportReview> .
+_:genid270 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid271 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#RestaurantReview> .
+_:genid271 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid272 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#HotelReview> .
+_:genid272 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid273 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#EventReview> .
+_:genid273 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#AttractionReview> .
+_:genid274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid269 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#RestaurantReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid275 .
+_:genid275 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid275 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#RestaurantReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid276 .
+_:genid276 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid276 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#RestaurantReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid277 .
+_:genid277 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid277 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid277 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#RestaurantReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid278 .
+_:genid278 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid278 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid278 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#RestaurantReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid279 .
+_:genid279 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid279 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid279 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#RestaurantReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Review of a restaurant." .
+<http://example.org/def/base#RestaurantReview> <http://www.w3.org/2000/01/rdf-schema#label> "RestaurantReview" .
+# 
+# http://example.org/def/base#Review
+<http://example.org/def/base#Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid280 .
+_:genid280 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid280 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid281 .
+_:genid281 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid281 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid281 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid282 .
+_:genid282 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid282 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid282 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid283 .
+_:genid283 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid283 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid283 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid284 .
+_:genid284 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid284 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid284 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Review> <http://www.w3.org/2000/01/rdf-schema#comment> "Review." .
+<http://example.org/def/base#Review> <http://www.w3.org/2000/01/rdf-schema#label> "Review" .
+# 
+# http://example.org/def/base#Reviewer
+<http://example.org/def/base#Reviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Reviewer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/foaf#Person> .
+<http://example.org/def/base#Reviewer> <http://www.w3.org/2000/01/rdf-schema#comment> "Person who writes reviews." .
+<http://example.org/def/base#Reviewer> <http://www.w3.org/2000/01/rdf-schema#label> "Reviewer" .
+# 
+# http://example.org/def/base#Summary
+<http://example.org/def/base#Summary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Summary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid285 .
+_:genid285 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#Review> .
+_:genid285 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#includes> .
+_:genid285 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Summary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid286 .
+_:genid286 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid286 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#includes> .
+_:genid286 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Summary> <http://www.w3.org/2000/01/rdf-schema#comment> "Summary of an intelligent tour." .
+<http://example.org/def/base#Summary> <http://www.w3.org/2000/01/rdf-schema#label> "Summary" .
+# 
+# http://example.org/def/base#Transport
+<http://example.org/def/base#Transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Transport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid287 .
+_:genid287 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid287 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportIn> .
+_:genid287 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Transport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid288 .
+_:genid288 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid288 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportAvgPrice> .
+_:genid288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Transport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid289 .
+_:genid289 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid289 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportProvider> .
+_:genid289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Transport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid290 .
+_:genid290 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid290 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#transportType> .
+_:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Transport> <http://www.w3.org/2000/01/rdf-schema#comment> "Transport." .
+<http://example.org/def/base#Transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport" .
+# 
+# http://example.org/def/base#TransportReview
+<http://example.org/def/base#TransportReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#TransportReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Review> .
+<http://example.org/def/base#TransportReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid291 .
+_:genid291 <http://www.w3.org/2002/07/owl#unionOf> _:genid296 .
+_:genid296 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid295 .
+_:genid295 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid294 .
+_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid293 .
+_:genid293 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid292 .
+_:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#TransportReview> .
+_:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid293 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#RestaurantReview> .
+_:genid293 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#HotelReview> .
+_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid295 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#EventReview> .
+_:genid295 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid296 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#AttractionReview> .
+_:genid296 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid291 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#TransportReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid297 .
+_:genid297 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid297 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#TransportReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid298 .
+_:genid298 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid298 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#TransportReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid299 .
+_:genid299 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid299 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid299 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#TransportReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid300 .
+_:genid300 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid300 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#TransportReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid301 .
+_:genid301 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid301 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#TransportReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Review of a transport." .
+<http://example.org/def/base#TransportReview> <http://www.w3.org/2000/01/rdf-schema#label> "TransportReview" .
+# 
+# http://www.owl-ontologies.com/dbo#City
+<http://www.owl-ontologies.com/dbo#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/dbo#City> <http://www.w3.org/2000/01/rdf-schema#comment> "City." .
+<http://www.owl-ontologies.com/dbo#City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+# 
+# http://www.owl-ontologies.com/dbo#Hotel
+<http://www.owl-ontologies.com/dbo#Hotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/dbo#Hotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Hotel." .
+<http://www.owl-ontologies.com/dbo#Hotel> <http://www.w3.org/2000/01/rdf-schema#label> "Hotel" .
+# 
+# http://www.owl-ontologies.com/foaf#Person
+<http://www.owl-ontologies.com/foaf#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/foaf#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "Person." .
+<http://www.owl-ontologies.com/foaf#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.org/def/base#attraction1
+<http://example.org/def/base#attraction1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/def/base#attraction1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/def/base#Attraction> .
+<http://example.org/def/base#attraction1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid302 .
+_:genid302 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid302 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionIn> .
+_:genid302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attraction1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid303 .
+_:genid303 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid303 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionName> .
+_:genid303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#attraction1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid304 .
+_:genid304 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid304 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#attractionType> .
+_:genid304 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://example.org/def/base#city1
+<http://example.org/def/base#city1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/def/base#city1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/def/base#City> .
+<http://example.org/def/base#city1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.owl-ontologies.com/dbo#City> .
+<http://example.org/def/base#city1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid305 .
+_:genid305 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid305 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityGeoLocation> .
+_:genid305 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#city1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid306 .
+_:genid306 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid306 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cityName> .
+_:genid306 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://example.org/def/base#cousine1
+<http://example.org/def/base#cousine1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/def/base#cousine1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/def/base#Cousine> .
+<http://example.org/def/base#cousine1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid307 .
+_:genid307 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid307 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#cousineName> .
+_:genid307 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#cousine1> <http://example.org/def/base#cousineName> "Italian" .
+# 
+# http://example.org/def/base#event1
+<http://example.org/def/base#event1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/def/base#event1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/def/base#Event> .
+<http://example.org/def/base#event1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid308 .
+_:genid308 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid308 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventIn> .
+_:genid308 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#event1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid309 .
+_:genid309 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid309 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventDate> .
+_:genid309 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#event1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid310 .
+_:genid310 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid310 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventName> .
+_:genid310 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#event1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid311 .
+_:genid311 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid311 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#eventType> .
+_:genid311 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://example.org/def/base#hotel1
+<http://example.org/def/base#hotel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/def/base#hotel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/def/base#Hotel> .
+<http://example.org/def/base#hotel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.owl-ontologies.com/dbo#Hotel> .
+<http://example.org/def/base#hotel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid312 .
+_:genid312 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid312 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelIn> .
+_:genid312 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid313 .
+_:genid313 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid313 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelName> .
+_:genid313 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid314 .
+_:genid314 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid314 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelNightPrice> .
+_:genid314 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid315 .
+_:genid315 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid315 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelStars> .
+_:genid315 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid316 .
+_:genid316 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid316 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hotelType> .
+_:genid316 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#hotel1> <http://example.org/def/base#hotelName> "hotelName1" .
+<http://example.org/def/base#hotel1> <http://example.org/def/base#hotelNightPrice> "100.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://example.org/def/base#hotel1> <http://example.org/def/base#hotelStars> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/def/base#hotel1> <http://example.org/def/base#hotelType> "Luxury" .
+# 
+# http://example.org/def/base#restaurant1
+<http://example.org/def/base#restaurant1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/def/base#restaurant1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/def/base#Restaurant> .
+<http://example.org/def/base#restaurant1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid317 .
+_:genid317 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid317 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantIn> .
+_:genid317 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurant1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid318 .
+_:genid318 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid318 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#servesCousine> .
+_:genid318 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurant1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid319 .
+_:genid319 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid319 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantAvgPrice> .
+_:genid319 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurant1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid320 .
+_:genid320 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid320 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#restaurantName> .
+_:genid320 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#restaurant1> <http://example.org/def/base#servesCousine> <http://example.org/def/base#cousine1> .
+<http://example.org/def/base#restaurant1> <http://example.org/def/base#restaurantName> "PizzPass" .
+# 
+# http://example.org/def/base#review1
+<http://example.org/def/base#review1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/def/base#review1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/def/base#Review> .
+<http://example.org/def/base#review1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid321 .
+_:genid321 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/def/base#Reviewer> .
+_:genid321 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid321 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#review1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid322 .
+_:genid322 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid322 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenBy> .
+_:genid322 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#review1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid323 .
+_:genid323 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid323 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#writtenOn> .
+_:genid323 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#review1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid324 .
+_:genid324 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid324 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#comment> .
+_:genid324 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#review1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid325 .
+_:genid325 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid325 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#rating> .
+_:genid325 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#review1> <http://example.org/def/base#comment> "Positive" .
+<http://example.org/def/base#review1> <http://example.org/def/base#rating> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/example#Sevilla
+<https://w3id.org/example#Sevilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/example#Sevilla> <http://example.org/def/base#hasHotel> <http://example.org/def/base#hotel1> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property for contributors." .
+# 
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property for creation date." .
+# 
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property for the creator." .
+# 
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property for description." .
+# 
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property for license." .
+# 
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property for title." .
+# 
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property for preferred namespace prefix." .
+# 
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property for preferred namespace URI." .
+# 
+<http://www.w3.org/2002/07/owl#priorVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property for prior version." .
+# 
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property for version information." .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid326 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid326 <http://www.w3.org/2002/07/owl#members> _:genid331 .
+_:genid331 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid330 .
+_:genid330 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid329 .
+_:genid329 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid328 .
+_:genid328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid327 .
+_:genid327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#Mexican> .
+_:genid327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#Mediterranean> .
+_:genid328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid329 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#Japanese> .
+_:genid329 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid330 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#Italian> .
+_:genid330 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid331 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#Andalussian> .
+_:genid331 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<http://example.org/def/base#h> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://example.org/def/base#s> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://example.org/def/base#r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://example.org/def/base#c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://example.org/def/base#v> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid332 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid332 <http://www.w3.org/2000/01/rdf-schema#comment> "If a hotel has 4 stars or more, then its type is \"Luxury\"." .
+_:genid332 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 1" .
+_:genid332 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid332 <http://www.w3.org/2003/11/swrl#body> _:genid339 .
+_:genid339 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid337 .
+_:genid337 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid333 .
+_:genid333 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid333 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid334 .
+_:genid334 <http://www.w3.org/2003/11/swrl#arguments> _:genid336 .
+_:genid336 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid335 .
+_:genid335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid336 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#s> .
+_:genid336 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid334 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+<http://www.w3.org/2003/11/swrlb#greaterThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid334 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid333 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid337 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid338 .
+_:genid338 <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/def/base#s> .
+_:genid338 <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#h> .
+_:genid338 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#hotelStars> .
+_:genid338 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid337 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid339 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid340 .
+_:genid340 <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#h> .
+_:genid340 <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/def/base#Hotel> .
+_:genid340 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid339 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid332 <http://www.w3.org/2003/11/swrl#head> _:genid341 .
+_:genid341 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid341 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid342 .
+_:genid342 <http://www.w3.org/2003/11/swrl#argument2> "Luxury" .
+_:genid342 <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#h> .
+_:genid342 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#hotelType> .
+_:genid342 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid341 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid343 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid343 <http://www.w3.org/2000/01/rdf-schema#comment> "If the name of a restaurant is \"PizzPass\", then the name of its cousine is \"Italian\"." .
+_:genid343 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 3" .
+_:genid343 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid343 <http://www.w3.org/2003/11/swrl#body> _:genid348 .
+_:genid348 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid346 .
+_:genid346 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid344 .
+_:genid344 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid344 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid345 .
+_:genid345 <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/def/base#c> .
+_:genid345 <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#r> .
+_:genid345 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#servesCousine> .
+_:genid345 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid344 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid346 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid347 .
+_:genid347 <http://www.w3.org/2003/11/swrl#argument2> "PizzPass" .
+_:genid347 <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#r> .
+_:genid347 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#restaurantName> .
+_:genid347 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid346 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid348 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid349 .
+_:genid349 <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#r> .
+_:genid349 <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/def/base#Restaurant> .
+_:genid349 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid348 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid343 <http://www.w3.org/2003/11/swrl#head> _:genid350 .
+_:genid350 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid350 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid351 .
+_:genid351 <http://www.w3.org/2003/11/swrl#argument2> "Italian" .
+_:genid351 <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#c> .
+_:genid351 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#cousineName> .
+_:genid351 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid350 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid352 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid352 <http://www.w3.org/2000/01/rdf-schema#comment> "If a review has a rating of 3 or more, then its comment is \"Positive”." .
+_:genid352 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 2" .
+_:genid352 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid352 <http://www.w3.org/2003/11/swrl#body> _:genid359 .
+_:genid359 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid357 .
+_:genid357 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid353 .
+_:genid353 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid353 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid354 .
+_:genid354 <http://www.w3.org/2003/11/swrl#arguments> _:genid356 .
+_:genid356 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid355 .
+_:genid355 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid355 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid355 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid356 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/def/base#v> .
+_:genid356 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid354 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+_:genid354 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid353 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid357 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid358 .
+_:genid358 <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/def/base#v> .
+_:genid358 <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#r> .
+_:genid358 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#rating> .
+_:genid358 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid357 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid359 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid360 .
+_:genid360 <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#r> .
+_:genid360 <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/def/base#Review> .
+_:genid360 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid359 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid352 <http://www.w3.org/2003/11/swrl#head> _:genid361 .
+_:genid361 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid361 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid362 .
+_:genid362 <http://www.w3.org/2003/11/swrl#argument2> "Positive" .
+_:genid362 <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#r> .
+_:genid362 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#comment> .
+_:genid362 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid361 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,2039 @@
+@prefix : <https://w3id.org/example#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/example#> .
+
+<https://w3id.org/example#> rdf:type owl:Ontology ;
+                             owl:versionIRI <https://w3id.org/example/1.0.1> ;
+                             <http://purl.org/dc/terms/contributor> <https://w3id.org/people#AContributorURI> ;
+                             <http://purl.org/dc/terms/created> "2025-04-26"^^xsd:date ;
+                             <http://purl.org/dc/terms/creator> <https://w3id.org/people#AuthorURI> ;
+                             <http://purl.org/dc/terms/description> "Ontology for planning and recommending tourist activities."@en ;
+                             <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                             <http://purl.org/dc/terms/title> "The Intel-Tour ontology"@en ;
+                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "choosenprefix" ;
+                             <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/example#> ;
+                             owl:priorVersion <https://w3id.org/example/1.0.0> ;
+                             owl:versionInfo "0.0.1" ;
+                             <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#priorVersion
+owl:priorVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty ;
+               rdfs:comment "Annotation property for version IRI." .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/def/base#attractionIn
+<http://example.org/def/base#attractionIn> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://example.org/def/base#Attraction> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#attractionIn> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#attractionName> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#attractionType> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ;
+                                           rdfs:range <http://example.org/def/base#City> ,
+                                                      <http://www.owl-ontologies.com/dbo#City> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#cityName> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                           rdfs:comment "Relationship between an attraction and a city." ;
+                                           rdfs:label "attractionIn" .
+
+
+###  http://example.org/def/base#attractionReview
+<http://example.org/def/base#attractionReview> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://example.org/def/base#Attraction> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://example.org/def/base#attractionIn> ;
+                                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://example.org/def/base#attractionName> ;
+                                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://example.org/def/base#attractionType> ;
+                                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                           ] ;
+                                               rdfs:range <http://example.org/def/base#Review> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                            owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#comment> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#rating> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ;
+                                               rdfs:comment "Relationship between an attraction and a review." ;
+                                               rdfs:label "attractionReview" .
+
+
+###  http://example.org/def/base#eventIn
+<http://example.org/def/base#eventIn> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://example.org/def/base#Event> ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#eventIn> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#eventDate> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#eventName> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#eventType> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ;
+                                      rdfs:range <http://example.org/def/base#City> ,
+                                                 <http://www.owl-ontologies.com/dbo#City> ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://example.org/def/base#cityName> ;
+                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                 ] ;
+                                      rdfs:comment "Relationship between an event and a city." ;
+                                      rdfs:label "eventIn" .
+
+
+###  http://example.org/def/base#eventReview
+<http://example.org/def/base#eventReview> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://example.org/def/base#Event> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#eventIn> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#eventDate> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#eventName> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#eventType> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                          rdfs:range <http://example.org/def/base#Review> ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                       owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#comment> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#rating> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ;
+                                          rdfs:comment "Relationship between an event and a review." ;
+                                          rdfs:label "eventReview" .
+
+
+###  http://example.org/def/base#hasAttraction
+<http://example.org/def/base#hasAttraction> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://example.org/def/base#City> ,
+                                                        <http://www.owl-ontologies.com/dbo#City> ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#cityName> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ;
+                                            rdfs:range <http://example.org/def/base#Attraction> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#attractionIn> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#attractionName> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#attractionType> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ;
+                                            rdfs:comment "Relationship between a city and an attraction." ;
+                                            rdfs:label "hasAttraction" .
+
+
+###  http://example.org/def/base#hasEvent
+<http://example.org/def/base#hasEvent> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://example.org/def/base#City> ,
+                                                   <http://www.owl-ontologies.com/dbo#City> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#cityName> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ;
+                                       rdfs:range <http://example.org/def/base#Event> ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#eventIn> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#eventDate> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#eventName> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#eventType> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ;
+                                       rdfs:comment "Relationship between a city and an event." ;
+                                       rdfs:label "hasEvent" .
+
+
+###  http://example.org/def/base#hasHotel
+<http://example.org/def/base#hasHotel> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://example.org/def/base#City> ,
+                                                   <http://www.owl-ontologies.com/dbo#City> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#cityName> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ;
+                                       rdfs:range <http://example.org/def/base#Hotel> ,
+                                                  <http://www.owl-ontologies.com/dbo#Hotel> ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#hotelIn> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#hotelName> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#hotelNightPrice> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#hotelStars> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#hotelType> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ;
+                                       rdfs:comment "Relationship between a city and a hotel." ;
+                                       rdfs:label "hasHotel" .
+
+
+###  http://example.org/def/base#hasRestaurant
+<http://example.org/def/base#hasRestaurant> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://example.org/def/base#City> ,
+                                                        <http://www.owl-ontologies.com/dbo#City> ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#cityName> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ;
+                                            rdfs:range <http://example.org/def/base#Restaurant> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#restaurantIn> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#servesCousine> ;
+                                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#restaurantAvgPrice> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#restaurantName> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ;
+                                            rdfs:comment "Relationship between a city and a restaurant." ;
+                                            rdfs:label "hasRestaurant" .
+
+
+###  http://example.org/def/base#hasSummary
+<http://example.org/def/base#hasSummary> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://example.org/def/base#IntelTour> ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#hasSummary> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#refersToCity> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ;
+                                         rdfs:range <http://example.org/def/base#Summary> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#includes> ;
+                                                      owl:someValuesFrom <http://example.org/def/base#Review>
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#includes> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                         rdfs:comment "Relationship between an intelligent tour and a summary." ;
+                                         rdfs:label "hasSummary" .
+
+
+###  http://example.org/def/base#hasTransport
+<http://example.org/def/base#hasTransport> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://example.org/def/base#City> ,
+                                                       <http://www.owl-ontologies.com/dbo#City> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#cityName> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ;
+                                           rdfs:range <http://example.org/def/base#Transport> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#transportIn> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#transportAvgPrice> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#transportProvider> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#transportType> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                           rdfs:comment "Relationship between a city and a transport." ;
+                                           rdfs:label "hasTransport" .
+
+
+###  http://example.org/def/base#hotelIn
+<http://example.org/def/base#hotelIn> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://example.org/def/base#Hotel> ,
+                                                  <http://www.owl-ontologies.com/dbo#Hotel> ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#hotelIn> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#hotelName> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#hotelNightPrice> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#hotelStars> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#hotelType> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ;
+                                      rdfs:range <http://example.org/def/base#City> ,
+                                                 <http://www.owl-ontologies.com/dbo#City> ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://example.org/def/base#cityName> ;
+                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                 ] ;
+                                      rdfs:comment "Relationship between a hotel and a city." ;
+                                      rdfs:label "hotelIn" .
+
+
+###  http://example.org/def/base#hotelReview
+<http://example.org/def/base#hotelReview> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://example.org/def/base#Hotel> ,
+                                                      <http://www.owl-ontologies.com/dbo#Hotel> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#hotelIn> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#hotelName> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#hotelNightPrice> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#hotelStars> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#hotelType> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                          rdfs:range <http://example.org/def/base#Review> ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                       owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#comment> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#rating> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ;
+                                          rdfs:comment "Relationship between a hotel and a review." ;
+                                          rdfs:label "hotelReview" .
+
+
+###  http://example.org/def/base#includes
+<http://example.org/def/base#includes> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://example.org/def/base#Summary> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#includes> ;
+                                                     owl:someValuesFrom <http://example.org/def/base#Review>
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#includes> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ;
+                                       rdfs:range [ rdf:type owl:Class ;
+                                                    owl:unionOf ( <http://example.org/def/base#AttractionReview>
+                                                                  <http://example.org/def/base#EventReview>
+                                                                  <http://example.org/def/base#HotelReview>
+                                                                  <http://example.org/def/base#RestaurantReview>
+                                                                  <http://example.org/def/base#TransportReview>
+                                                                )
+                                                  ] ;
+                                       rdfs:comment "Relationship between a summary and the included reviews." ;
+                                       rdfs:label "includes" .
+
+
+###  http://example.org/def/base#refersToCity
+<http://example.org/def/base#refersToCity> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://example.org/def/base#IntelTour> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#hasSummary> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#refersToCity> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ;
+                                           rdfs:range <http://example.org/def/base#City> ,
+                                                      <http://www.owl-ontologies.com/dbo#City> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#cityName> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                           rdfs:comment "Relationship between an intelligent tour and a city." ;
+                                           rdfs:label "refersToCity" .
+
+
+###  http://example.org/def/base#restaurantIn
+<http://example.org/def/base#restaurantIn> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://example.org/def/base#Restaurant> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#restaurantIn> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#servesCousine> ;
+                                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#restaurantAvgPrice> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#restaurantName> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ;
+                                           rdfs:range <http://example.org/def/base#City> ,
+                                                      <http://www.owl-ontologies.com/dbo#City> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#cityName> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                           rdfs:comment "Relationship between a restaurant and a city." ;
+                                           rdfs:label "restaurantIn" .
+
+
+###  http://example.org/def/base#restaurantReview
+<http://example.org/def/base#restaurantReview> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://example.org/def/base#Restaurant> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://example.org/def/base#restaurantIn> ;
+                                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://example.org/def/base#servesCousine> ;
+                                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://example.org/def/base#restaurantAvgPrice> ;
+                                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://example.org/def/base#restaurantName> ;
+                                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                           ] ;
+                                               rdfs:range <http://example.org/def/base#Review> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                            owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#comment> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#rating> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ;
+                                               rdfs:comment "Relationship between a restaurant and a review." ;
+                                               rdfs:label "restaurantReview" .
+
+
+###  http://example.org/def/base#servesCousine
+<http://example.org/def/base#servesCousine> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://example.org/def/base#Restaurant> ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#restaurantIn> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#servesCousine> ;
+                                                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#restaurantAvgPrice> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#restaurantName> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ;
+                                            rdfs:range <http://example.org/def/base#Cousine> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#cousineName> ;
+                                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ;
+                                            rdfs:comment "Relationship between a restaurant and the type of cuisine it serves." ;
+                                            rdfs:label "servesCousine" .
+
+
+###  http://example.org/def/base#transportIn
+<http://example.org/def/base#transportIn> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://example.org/def/base#Transport> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#transportIn> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#transportAvgPrice> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#transportProvider> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#transportType> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                          rdfs:range <http://example.org/def/base#City> ,
+                                                     <http://www.owl-ontologies.com/dbo#City> ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#cityName> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ;
+                                          rdfs:comment "Relationship between a transport and a city." ;
+                                          rdfs:label "transportIn" .
+
+
+###  http://example.org/def/base#transportReview
+<http://example.org/def/base#transportReview> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://example.org/def/base#Transport> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#transportIn> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#transportAvgPrice> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#transportProvider> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#transportType> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ;
+                                              rdfs:range <http://example.org/def/base#Review> ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                           owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#comment> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#rating> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ;
+                                              rdfs:comment "Relationship between a transport and a review." ;
+                                              rdfs:label "transportReview" .
+
+
+###  http://example.org/def/base#writtenBy
+<http://example.org/def/base#writtenBy> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://example.org/def/base#Review> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                      owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#comment> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#rating> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                        rdfs:range <http://example.org/def/base#Reviewer> ,
+                                                   <http://www.owl-ontologies.com/foaf#Person> ;
+                                        rdfs:comment "Relationship between a review and its author." ;
+                                        rdfs:label "writtenBy" .
+
+
+###  http://example.org/def/base#writtenOn
+<http://example.org/def/base#writtenOn> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://example.org/def/base#Review> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                      owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#comment> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#rating> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                        rdfs:range <http://example.org/def/base#Date> ;
+                                        rdfs:comment "Relationship between a review and the date it was written." ;
+                                        rdfs:label "writtenOn" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/def/base#attractionName
+<http://example.org/def/base#attractionName> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <http://example.org/def/base#Attraction> ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#attractionIn> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#attractionName> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#attractionType> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ;
+                                             rdfs:range xsd:string ;
+                                             rdfs:comment "Name of the attraction." ;
+                                             rdfs:label "attractionName" .
+
+
+###  http://example.org/def/base#attractionType
+<http://example.org/def/base#attractionType> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <http://example.org/def/base#Attraction> ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#attractionIn> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#attractionName> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#attractionType> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ;
+                                             rdfs:range xsd:string ;
+                                             rdfs:comment "Type of the attraction." ;
+                                             rdfs:label "attractionType" .
+
+
+###  http://example.org/def/base#cityGeoLocation
+<http://example.org/def/base#cityGeoLocation> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://example.org/def/base#City> ,
+                                                          <http://www.owl-ontologies.com/dbo#City> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#cityName> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "Geographical location of the city." ;
+                                              rdfs:label "cityGeoLocation" .
+
+
+###  http://example.org/def/base#cityName
+<http://example.org/def/base#cityName> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <http://example.org/def/base#City> ,
+                                                   <http://www.owl-ontologies.com/dbo#City> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#cityName> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:comment "Name of the city." ;
+                                       rdfs:label "cityName" .
+
+
+###  http://example.org/def/base#comment
+<http://example.org/def/base#comment> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <http://example.org/def/base#Review> ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                    owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#comment> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://example.org/def/base#rating> ;
+                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                  ] ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:comment "Comment of the review." ;
+                                      rdfs:label "comment" .
+
+
+###  http://example.org/def/base#cousineName
+<http://example.org/def/base#cousineName> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <http://example.org/def/base#Cousine> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#cousineName> ;
+                                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:comment "Name of the cuisine." ;
+                                          rdfs:label "cousineName" .
+
+
+###  http://example.org/def/base#eventDate
+<http://example.org/def/base#eventDate> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://example.org/def/base#Event> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventIn> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventDate> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventName> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventType> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                        rdfs:range xsd:date ;
+                                        rdfs:comment "Date of the event." ;
+                                        rdfs:label "eventDate" .
+
+
+###  http://example.org/def/base#eventName
+<http://example.org/def/base#eventName> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://example.org/def/base#Event> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventIn> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventDate> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventName> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventType> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "Name of the event." ;
+                                        rdfs:label "eventName" .
+
+
+###  http://example.org/def/base#eventType
+<http://example.org/def/base#eventType> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://example.org/def/base#Event> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventIn> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventDate> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventName> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventType> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "Type of the event." ;
+                                        rdfs:label "eventType" .
+
+
+###  http://example.org/def/base#hotelName
+<http://example.org/def/base#hotelName> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://example.org/def/base#Hotel> ,
+                                                    <http://www.owl-ontologies.com/dbo#Hotel> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelIn> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelName> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelNightPrice> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelStars> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelType> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "Name of the hotel." ;
+                                        rdfs:label "hotelName" .
+
+
+###  http://example.org/def/base#hotelNightPrice
+<http://example.org/def/base#hotelNightPrice> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://example.org/def/base#Hotel> ,
+                                                          <http://www.owl-ontologies.com/dbo#Hotel> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#hotelIn> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#hotelName> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#hotelNightPrice> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#hotelStars> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#hotelType> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ;
+                                              rdfs:range xsd:float ;
+                                              rdfs:comment "Nightly price of the hotel." ;
+                                              rdfs:label "hotelNightPrice" .
+
+
+###  http://example.org/def/base#hotelStars
+<http://example.org/def/base#hotelStars> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://example.org/def/base#Hotel> ,
+                                                     <http://www.owl-ontologies.com/dbo#Hotel> ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#hotelIn> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#hotelName> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#hotelNightPrice> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#hotelStars> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#hotelType> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ;
+                                         rdfs:range xsd:integer ;
+                                         rdfs:comment "Number of stars of the hotel." ;
+                                         rdfs:label "hotelStars" .
+
+
+###  http://example.org/def/base#hotelType
+<http://example.org/def/base#hotelType> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://example.org/def/base#Hotel> ,
+                                                    <http://www.owl-ontologies.com/dbo#Hotel> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelIn> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelName> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelNightPrice> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelStars> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelType> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "Type of the hotel." ;
+                                        rdfs:label "hotelType" .
+
+
+###  http://example.org/def/base#rating
+<http://example.org/def/base#rating> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <http://example.org/def/base#Review> ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                   owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://example.org/def/base#comment> ;
+                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://example.org/def/base#rating> ;
+                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                 ] ;
+                                     rdfs:range xsd:integer ;
+                                     rdfs:comment "Rating of the review." ;
+                                     rdfs:label "rating" .
+
+
+###  http://example.org/def/base#restaurantAvgPrice
+<http://example.org/def/base#restaurantAvgPrice> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <http://example.org/def/base#Restaurant> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://example.org/def/base#restaurantIn> ;
+                                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://example.org/def/base#servesCousine> ;
+                                                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://example.org/def/base#restaurantAvgPrice> ;
+                                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://example.org/def/base#restaurantName> ;
+                                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                             ] ;
+                                                 rdfs:range xsd:float ;
+                                                 rdfs:comment "Average price of the restaurant." ;
+                                                 rdfs:label "restaurantAvgPrice" .
+
+
+###  http://example.org/def/base#restaurantName
+<http://example.org/def/base#restaurantName> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <http://example.org/def/base#Restaurant> ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#restaurantIn> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#servesCousine> ;
+                                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#restaurantAvgPrice> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#restaurantName> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ;
+                                             rdfs:range xsd:string ;
+                                             rdfs:comment "Name of the restaurant." ;
+                                             rdfs:label "restaurantName" .
+
+
+###  http://example.org/def/base#transportAvgPrice
+<http://example.org/def/base#transportAvgPrice> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://example.org/def/base#Transport> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://example.org/def/base#transportIn> ;
+                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://example.org/def/base#transportAvgPrice> ;
+                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://example.org/def/base#transportProvider> ;
+                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://example.org/def/base#transportType> ;
+                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ;
+                                                rdfs:range xsd:float ;
+                                                rdfs:comment "Average price of the transport." ;
+                                                rdfs:label "transportAvgPrice" .
+
+
+###  http://example.org/def/base#transportProvider
+<http://example.org/def/base#transportProvider> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://example.org/def/base#Transport> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://example.org/def/base#transportIn> ;
+                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://example.org/def/base#transportAvgPrice> ;
+                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://example.org/def/base#transportProvider> ;
+                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://example.org/def/base#transportType> ;
+                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:comment "Provider of the transport." ;
+                                                rdfs:label "transportProvider" .
+
+
+###  http://example.org/def/base#transportType
+<http://example.org/def/base#transportType> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://example.org/def/base#Transport> ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#transportIn> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#transportAvgPrice> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#transportProvider> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#transportType> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:comment "Type of the transport." ;
+                                            rdfs:label "transportType" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/def/base#Andalussian
+<http://example.org/def/base#Andalussian> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://example.org/def/base#Cousine> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#cousineName> ;
+                                                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ;
+                                          rdfs:comment "Andalusian cuisine." ;
+                                          rdfs:label "Andalussian" .
+
+
+###  http://example.org/def/base#Attraction
+<http://example.org/def/base#Attraction> rdf:type owl:Class ;
+                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#attractionIn> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#attractionName> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#attractionType> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ;
+                                         rdfs:comment "Tourist attraction." ;
+                                         rdfs:label "Attraction" .
+
+
+###  http://example.org/def/base#AttractionReview
+<http://example.org/def/base#AttractionReview> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://example.org/def/base#Review> ,
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( <http://example.org/def/base#AttractionReview>
+                                                                               <http://example.org/def/base#EventReview>
+                                                                               <http://example.org/def/base#HotelReview>
+                                                                               <http://example.org/def/base#RestaurantReview>
+                                                                               <http://example.org/def/base#TransportReview>
+                                                                             )
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                                 owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://example.org/def/base#comment> ;
+                                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://example.org/def/base#rating> ;
+                                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                               ] ;
+                                               rdfs:comment "Review of an attraction." ;
+                                               rdfs:label "AttractionReview" .
+
+
+###  http://example.org/def/base#City
+<http://example.org/def/base#City> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.owl-ontologies.com/dbo#City> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#cityName> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ;
+                                   rdfs:comment "City." ;
+                                   rdfs:label "City" .
+
+
+###  http://example.org/def/base#Cousine
+<http://example.org/def/base#Cousine> rdf:type owl:Class ;
+                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#cousineName> ;
+                                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                      rdfs:comment "Type of cuisine." ;
+                                      rdfs:label "Cousine" .
+
+
+###  http://example.org/def/base#Date
+<http://example.org/def/base#Date> rdf:type owl:Class ;
+                                   rdfs:comment "Date." ;
+                                   rdfs:label "Date" .
+
+
+###  http://example.org/def/base#Event
+<http://example.org/def/base#Event> rdf:type owl:Class ;
+                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventIn> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventDate> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventName> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#eventType> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                    rdfs:comment "Event." ;
+                                    rdfs:label "Event" .
+
+
+###  http://example.org/def/base#EventReview
+<http://example.org/def/base#EventReview> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://example.org/def/base#Review> ,
+                                                          [ rdf:type owl:Class ;
+                                                            owl:unionOf ( <http://example.org/def/base#AttractionReview>
+                                                                          <http://example.org/def/base#EventReview>
+                                                                          <http://example.org/def/base#HotelReview>
+                                                                          <http://example.org/def/base#RestaurantReview>
+                                                                          <http://example.org/def/base#TransportReview>
+                                                                        )
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                            owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#comment> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#rating> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ;
+                                          rdfs:comment "Review of an event." ;
+                                          rdfs:label "EventReview" .
+
+
+###  http://example.org/def/base#Hotel
+<http://example.org/def/base#Hotel> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://www.owl-ontologies.com/dbo#Hotel> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelIn> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelName> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelNightPrice> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelStars> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://example.org/def/base#hotelType> ;
+                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                    rdfs:comment "Hotel." ;
+                                    rdfs:label "Hotel" .
+
+
+###  http://example.org/def/base#HotelReview
+<http://example.org/def/base#HotelReview> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://example.org/def/base#Review> ,
+                                                          [ rdf:type owl:Class ;
+                                                            owl:unionOf ( <http://example.org/def/base#AttractionReview>
+                                                                          <http://example.org/def/base#EventReview>
+                                                                          <http://example.org/def/base#HotelReview>
+                                                                          <http://example.org/def/base#RestaurantReview>
+                                                                          <http://example.org/def/base#TransportReview>
+                                                                        )
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                            owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#comment> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://example.org/def/base#rating> ;
+                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                          ] ;
+                                          rdfs:comment "Review of a hotel." ;
+                                          rdfs:label "HotelReview" .
+
+
+###  http://example.org/def/base#IntelTour
+<http://example.org/def/base#IntelTour> rdf:type owl:Class ;
+                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#hasSummary> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#refersToCity> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ;
+                                        rdfs:comment "Intelligent tour." ;
+                                        rdfs:label "IntelTour" .
+
+
+###  http://example.org/def/base#Italian
+<http://example.org/def/base#Italian> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://example.org/def/base#Cousine> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#cousineName> ;
+                                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                      rdfs:comment "Italian cuisine." ;
+                                      rdfs:label "Italian" .
+
+
+###  http://example.org/def/base#Japanese
+<http://example.org/def/base#Japanese> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://example.org/def/base#Cousine> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://example.org/def/base#cousineName> ;
+                                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ;
+                                       rdfs:comment "Japanese cuisine." ;
+                                       rdfs:label "Japanese" .
+
+
+###  http://example.org/def/base#Mediterranean
+<http://example.org/def/base#Mediterranean> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://example.org/def/base#Cousine> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://example.org/def/base#cousineName> ;
+                                                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ;
+                                            rdfs:comment "Mediterranean cuisine." ;
+                                            rdfs:label "Mediterranean" .
+
+
+###  http://example.org/def/base#Mexican
+<http://example.org/def/base#Mexican> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://example.org/def/base#Cousine> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#cousineName> ;
+                                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                      rdfs:comment "Mexican cuisine." ;
+                                      rdfs:label "Mexican" .
+
+
+###  http://example.org/def/base#Restaurant
+<http://example.org/def/base#Restaurant> rdf:type owl:Class ;
+                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#restaurantIn> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#servesCousine> ;
+                                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#restaurantAvgPrice> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://example.org/def/base#restaurantName> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ;
+                                         rdfs:comment "Restaurant." ;
+                                         rdfs:label "Restaurant" .
+
+
+###  http://example.org/def/base#RestaurantReview
+<http://example.org/def/base#RestaurantReview> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://example.org/def/base#Review> ,
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( <http://example.org/def/base#AttractionReview>
+                                                                               <http://example.org/def/base#EventReview>
+                                                                               <http://example.org/def/base#HotelReview>
+                                                                               <http://example.org/def/base#RestaurantReview>
+                                                                               <http://example.org/def/base#TransportReview>
+                                                                             )
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                                 owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://example.org/def/base#comment> ;
+                                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://example.org/def/base#rating> ;
+                                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                               ] ;
+                                               rdfs:comment "Review of a restaurant." ;
+                                               rdfs:label "RestaurantReview" .
+
+
+###  http://example.org/def/base#Review
+<http://example.org/def/base#Review> rdf:type owl:Class ;
+                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                       owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#comment> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/def/base#rating> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ;
+                                     rdfs:comment "Review." ;
+                                     rdfs:label "Review" .
+
+
+###  http://example.org/def/base#Reviewer
+<http://example.org/def/base#Reviewer> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.owl-ontologies.com/foaf#Person> ;
+                                       rdfs:comment "Person who writes reviews." ;
+                                       rdfs:label "Reviewer" .
+
+
+###  http://example.org/def/base#Summary
+<http://example.org/def/base#Summary> rdf:type owl:Class ;
+                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#includes> ;
+                                                        owl:someValuesFrom <http://example.org/def/base#Review>
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://example.org/def/base#includes> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                      rdfs:comment "Summary of an intelligent tour." ;
+                                      rdfs:label "Summary" .
+
+
+###  http://example.org/def/base#Transport
+<http://example.org/def/base#Transport> rdf:type owl:Class ;
+                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#transportIn> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#transportAvgPrice> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#transportProvider> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://example.org/def/base#transportType> ;
+                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ;
+                                        rdfs:comment "Transport." ;
+                                        rdfs:label "Transport" .
+
+
+###  http://example.org/def/base#TransportReview
+<http://example.org/def/base#TransportReview> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://example.org/def/base#Review> ,
+                                                              [ rdf:type owl:Class ;
+                                                                owl:unionOf ( <http://example.org/def/base#AttractionReview>
+                                                                              <http://example.org/def/base#EventReview>
+                                                                              <http://example.org/def/base#HotelReview>
+                                                                              <http://example.org/def/base#RestaurantReview>
+                                                                              <http://example.org/def/base#TransportReview>
+                                                                            )
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                                owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://example.org/def/base#comment> ;
+                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://example.org/def/base#rating> ;
+                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                              ] ;
+                                              rdfs:comment "Review of a transport." ;
+                                              rdfs:label "TransportReview" .
+
+
+###  http://www.owl-ontologies.com/dbo#City
+<http://www.owl-ontologies.com/dbo#City> rdf:type owl:Class ;
+                                         rdfs:comment "City." ;
+                                         rdfs:label "City" .
+
+
+###  http://www.owl-ontologies.com/dbo#Hotel
+<http://www.owl-ontologies.com/dbo#Hotel> rdf:type owl:Class ;
+                                          rdfs:comment "Hotel." ;
+                                          rdfs:label "Hotel" .
+
+
+###  http://www.owl-ontologies.com/foaf#Person
+<http://www.owl-ontologies.com/foaf#Person> rdf:type owl:Class ;
+                                            rdfs:comment "Person." ;
+                                            rdfs:label "Person" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/def/base#attraction1
+<http://example.org/def/base#attraction1> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/def/base#Attraction> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#attractionIn> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#attractionName> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#attractionType> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] .
+
+
+###  http://example.org/def/base#city1
+<http://example.org/def/base#city1> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/def/base#City> ,
+                                             <http://www.owl-ontologies.com/dbo#City> ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://example.org/def/base#cityGeoLocation> ;
+                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://example.org/def/base#cityName> ;
+                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                             ] .
+
+
+###  http://example.org/def/base#cousine1
+<http://example.org/def/base#cousine1> rdf:type owl:NamedIndividual ,
+                                                <http://example.org/def/base#Cousine> ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://example.org/def/base#cousineName> ;
+                                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                ] ;
+                                       <http://example.org/def/base#cousineName> "Italian" .
+
+
+###  http://example.org/def/base#event1
+<http://example.org/def/base#event1> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/def/base#Event> ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://example.org/def/base#eventIn> ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://example.org/def/base#eventDate> ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://example.org/def/base#eventName> ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://example.org/def/base#eventType> ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              ] .
+
+
+###  http://example.org/def/base#hotel1
+<http://example.org/def/base#hotel1> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/def/base#Hotel> ,
+                                              <http://www.owl-ontologies.com/dbo#Hotel> ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://example.org/def/base#hotelIn> ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://example.org/def/base#hotelName> ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://example.org/def/base#hotelNightPrice> ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://example.org/def/base#hotelStars> ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://example.org/def/base#hotelType> ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              ] ;
+                                     <http://example.org/def/base#hotelName> "hotelName1" ;
+                                     <http://example.org/def/base#hotelNightPrice> "100.0"^^xsd:float ;
+                                     <http://example.org/def/base#hotelStars> 5 ;
+                                     <http://example.org/def/base#hotelType> "Luxury" .
+
+
+###  http://example.org/def/base#restaurant1
+<http://example.org/def/base#restaurant1> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/def/base#Restaurant> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#restaurantIn> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#servesCousine> ;
+                                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#restaurantAvgPrice> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://example.org/def/base#restaurantName> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ;
+                                          <http://example.org/def/base#servesCousine> <http://example.org/def/base#cousine1> ;
+                                          <http://example.org/def/base#restaurantName> "PizzPass" .
+
+
+###  http://example.org/def/base#review1
+<http://example.org/def/base#review1> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/def/base#Review> ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                 owl:allValuesFrom <http://example.org/def/base#Reviewer>
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://example.org/def/base#writtenBy> ;
+                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://example.org/def/base#writtenOn> ;
+                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://example.org/def/base#comment> ;
+                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://example.org/def/base#rating> ;
+                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                               ] ;
+                                      <http://example.org/def/base#comment> "Positive" ;
+                                      <http://example.org/def/base#rating> 4 .
+
+
+###  https://w3id.org/example#Sevilla
+:Sevilla rdf:type owl:NamedIndividual ;
+         <http://example.org/def/base#hasHotel> <http://example.org/def/base#hotel1> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/contributor> rdfs:comment "Annotation property for contributors." .
+
+
+<http://purl.org/dc/terms/created> rdfs:comment "Annotation property for creation date." .
+
+
+<http://purl.org/dc/terms/creator> rdfs:comment "Annotation property for the creator." .
+
+
+<http://purl.org/dc/terms/description> rdfs:comment "Annotation property for description." .
+
+
+<http://purl.org/dc/terms/license> rdfs:comment "Annotation property for license." .
+
+
+<http://purl.org/dc/terms/title> rdfs:comment "Annotation property for title." .
+
+
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdfs:comment "Annotation property for preferred namespace prefix." .
+
+
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdfs:comment "Annotation property for preferred namespace URI." .
+
+
+owl:priorVersion rdfs:comment "Annotation property for prior version." .
+
+
+owl:versionInfo rdfs:comment "Annotation property for version information." .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://example.org/def/base#Andalussian>
+                <http://example.org/def/base#Italian>
+                <http://example.org/def/base#Japanese>
+                <http://example.org/def/base#Mediterranean>
+                <http://example.org/def/base#Mexican>
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://example.org/def/base#h> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://example.org/def/base#s> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://example.org/def/base#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://example.org/def/base#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://example.org/def/base#v> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "If a hotel has 4 stars or more, then its type is \"Luxury\"." ;
+   rdfs:label "Rule 1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/def/base#Hotel> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#h>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#hotelStars> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#h> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/def/base#s>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://example.org/def/base#s> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 4 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#hotelType> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#h> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "Luxury"
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "If the name of a restaurant is \"PizzPass\", then the name of its cousine is \"Italian\"." ;
+   rdfs:label "Rule 3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/def/base#Restaurant> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#r>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#restaurantName> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#r> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> "PizzPass"
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#servesCousine> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#r> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/def/base#c>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#cousineName> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#c> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "Italian"
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "If a review has a rating of 3 or more, then its comment is \"Positive”." ;
+   rdfs:label "Rule 2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/def/base#Review> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#r>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#rating> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#r> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/def/base#v>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://example.org/def/base#v> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 3 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/def/base#comment> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/def/base#r> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "Positive"
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>The Intel-Tour ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/example#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/example#","name":"The Intel-Tour ontology", "headline":"The Intel-Tour ontology is designed to facilitate the planning and recommendation of tourist activities. It provides a structured framework for describing cities, attractions, events, hotels, restaurants, transportation and reviews. The ontology includes properties and relationships that enable the integration and querying of tourist-related data, supporting both human and machine-readable formats.", "dateReleased":"2025-04-26", "version":"0.0.1", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"https://w3id.org/people#AuthorURI","url":"https://w3id.org/people#AuthorURI"}], "contributor":[{"@type":"Person","name":"https://w3id.org/people#AContributorURI","url":"https://w3id.org/people#AContributorURI"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The Intel-Tour ontology</h1>
+<h2>Release: 2025-04-26</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/example/1.0.1">https://w3id.org/example/1.0.1</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/example#">https://w3id.org/example#</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="https://w3id.org/example/1.0.0">https://w3id.org/example/1.0.0</a></dd>
+<dt>Revision:</dt>
+<dd>0.0.1</dd>
+<dt>Issued on:</dt>
+<dd>Date issued</dd>
+<dt>Authors:</dt>
+<dd><a href="https://w3id.org/people#AuthorURI">https://w3id.org/people#AuthorURI</a></dd>
+
+<dt>Contributors:</dt>
+<dd><a href="https://w3id.org/people#AContributorURI">https://w3id.org/people#AContributorURI</a></dd>
+
+<dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+<a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
+<img src="null" style="border-width:0" alt="License" />
+</a>
+<br/></dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>https://w3id.org/people#AuthorURI. The Intel-Tour ontology. Revision: 0.0.1. Retrieved from: https://w3id.org/example/1.0.1</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The Intel-Tour ontology is designed to facilitate the planning and recommendation of tourist activities. It provides a structured framework for describing cities, attractions, events, hotels, restaurants, transportation and reviews. The ontology includes properties and relationships that enable the integration and querying of tourist-related data, supporting both human and machine-readable formats.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">The Intel-Tour ontology defines a comprehensive model for representing tourist activities and related entities. It includes classes for cities, attractions, events, hotels, restaurants, transportation and reviews. This ontology aims to enhance the interoperability and accessibility of tourist information, making it easier to plan and recommend activities based on user preferences and reviews.</span>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">The Intel-Tour ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">Ontology for planning and recommending tourist activities.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for The Intel-Tour ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The Intel-Tour ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#http://example.org/def/base#Andalussian" title="http://example.org/def/base#Andalussian">Andalussian</a></li>
+  <li><a href="#http://example.org/def/base#Attraction" title="http://example.org/def/base#Attraction">Attraction</a></li>
+  <li><a href="#http://example.org/def/base#AttractionReview" title="http://example.org/def/base#AttractionReview">AttractionReview</a></li>
+  <li><a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a></li>
+  <li><a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a></li>
+  <li><a href="#http://example.org/def/base#Cousine" title="http://example.org/def/base#Cousine">Cousine</a></li>
+  <li><a href="#http://example.org/def/base#Date" title="http://example.org/def/base#Date">Date</a></li>
+  <li><a href="#http://example.org/def/base#Event" title="http://example.org/def/base#Event">Event</a></li>
+  <li><a href="#http://example.org/def/base#EventReview" title="http://example.org/def/base#EventReview">EventReview</a></li>
+  <li><a href="#http://example.org/def/base#Hotel" title="http://example.org/def/base#Hotel">Hotel</a></li>
+  <li><a href="#http://www.owl-ontologies.com/dbo#Hotel" title="http://www.owl-ontologies.com/dbo#Hotel">Hotel</a></li>
+  <li><a href="#http://example.org/def/base#HotelReview" title="http://example.org/def/base#HotelReview">HotelReview</a></li>
+  <li><a href="#http://example.org/def/base#IntelTour" title="http://example.org/def/base#IntelTour">IntelTour</a></li>
+  <li><a href="#http://example.org/def/base#Italian" title="http://example.org/def/base#Italian">Italian</a></li>
+  <li><a href="#http://example.org/def/base#Japanese" title="http://example.org/def/base#Japanese">Japanese</a></li>
+  <li><a href="#http://example.org/def/base#Mediterranean" title="http://example.org/def/base#Mediterranean">Mediterranean</a></li>
+  <li><a href="#http://example.org/def/base#Mexican" title="http://example.org/def/base#Mexican">Mexican</a></li>
+  <li><a href="#http://www.owl-ontologies.com/foaf#Person" title="http://www.owl-ontologies.com/foaf#Person">Person</a></li>
+  <li><a href="#http://example.org/def/base#Restaurant" title="http://example.org/def/base#Restaurant">Restaurant</a></li>
+  <li><a href="#http://example.org/def/base#RestaurantReview" title="http://example.org/def/base#RestaurantReview">RestaurantReview</a></li>
+  <li><a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a></li>
+  <li><a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a></li>
+  <li><a href="#http://example.org/def/base#Summary" title="http://example.org/def/base#Summary">Summary</a></li>
+  <li><a href="#http://example.org/def/base#Transport" title="http://example.org/def/base#Transport">Transport</a></li>
+  <li><a href="#http://example.org/def/base#TransportReview" title="http://example.org/def/base#TransportReview">TransportReview</a></li>
+ </ul>
+ <div class="entity" id="http://example.org/def/base#Andalussian">
+  <h3>Andalussian<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Andalussian</p>
+  <div class="comment">
+   <span class="markdown">Andalusian cuisine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Cousine" title="http://example.org/def/base#Cousine">Cousine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Italian" title="http://example.org/def/base#Italian">Italian</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Japanese" title="http://example.org/def/base#Japanese">Japanese</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Mediterranean" title="http://example.org/def/base#Mediterranean">Mediterranean</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Mexican" title="http://example.org/def/base#Mexican">Mexican</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Attraction">
+  <h3>Attraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Attraction</p>
+  <div class="comment">
+   <span class="markdown">Tourist attraction.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#attractionIn" title="http://example.org/def/base#attractionIn">attractionIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#attractionName" title="http://example.org/def/base#attractionName">attractionName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#attractionReview" title="http://example.org/def/base#attractionReview">attractionReview</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#attractionType" title="http://example.org/def/base#attractionType">attractionType</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hasAttraction" title="http://example.org/def/base#hasAttraction">hasAttraction</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#attraction1" title="http://example.org/def/base#attraction1">attraction1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#AttractionReview">
+  <h3>AttractionReview<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#AttractionReview</p>
+  <div class="comment">
+   <span class="markdown">Review of an attraction.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#includes" title="http://example.org/def/base#includes">includes</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#City">
+  <h3>City<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#City</p>
+  <div class="comment">
+   <span class="markdown">City.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#hasAttraction" title="http://example.org/def/base#hasAttraction">hasAttraction</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hasEvent" title="http://example.org/def/base#hasEvent">hasEvent</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hasHotel" title="http://example.org/def/base#hasHotel">hasHotel</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hasRestaurant" title="http://example.org/def/base#hasRestaurant">hasRestaurant</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hasTransport" title="http://example.org/def/base#hasTransport">hasTransport</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#attractionIn" title="http://example.org/def/base#attractionIn">attractionIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#eventIn" title="http://example.org/def/base#eventIn">eventIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#refersToCity" title="http://example.org/def/base#refersToCity">refersToCity</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#restaurantIn" title="http://example.org/def/base#restaurantIn">restaurantIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#transportIn" title="http://example.org/def/base#transportIn">transportIn</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#city1" title="http://example.org/def/base#city1">city1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/dbo#City">
+  <h3>City<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/dbo#City</p>
+  <div class="comment">
+   <span class="markdown">City.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#hasAttraction" title="http://example.org/def/base#hasAttraction">hasAttraction</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hasEvent" title="http://example.org/def/base#hasEvent">hasEvent</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hasHotel" title="http://example.org/def/base#hasHotel">hasHotel</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hasRestaurant" title="http://example.org/def/base#hasRestaurant">hasRestaurant</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hasTransport" title="http://example.org/def/base#hasTransport">hasTransport</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#attractionIn" title="http://example.org/def/base#attractionIn">attractionIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#eventIn" title="http://example.org/def/base#eventIn">eventIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#refersToCity" title="http://example.org/def/base#refersToCity">refersToCity</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#restaurantIn" title="http://example.org/def/base#restaurantIn">restaurantIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#transportIn" title="http://example.org/def/base#transportIn">transportIn</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#city1" title="http://example.org/def/base#city1">city1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Cousine">
+  <h3>Cousine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Cousine</p>
+  <div class="comment">
+   <span class="markdown">Type of cuisine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Andalussian" title="http://example.org/def/base#Andalussian">Andalussian</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Italian" title="http://example.org/def/base#Italian">Italian</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Japanese" title="http://example.org/def/base#Japanese">Japanese</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Mediterranean" title="http://example.org/def/base#Mediterranean">Mediterranean</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Mexican" title="http://example.org/def/base#Mexican">Mexican</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#cousineName" title="http://example.org/def/base#cousineName">cousineName</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#servesCousine" title="http://example.org/def/base#servesCousine">servesCousine</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#cousine1" title="http://example.org/def/base#cousine1">cousine1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Date">
+  <h3>Date<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Date</p>
+  <div class="comment">
+   <span class="markdown">Date.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Event">
+  <h3>Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Event</p>
+  <div class="comment">
+   <span class="markdown">Event.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#eventDate" title="http://example.org/def/base#eventDate">eventDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#eventIn" title="http://example.org/def/base#eventIn">eventIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#eventName" title="http://example.org/def/base#eventName">eventName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#eventReview" title="http://example.org/def/base#eventReview">eventReview</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#eventType" title="http://example.org/def/base#eventType">eventType</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hasEvent" title="http://example.org/def/base#hasEvent">hasEvent</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#event1" title="http://example.org/def/base#event1">event1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#EventReview">
+  <h3>EventReview<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#EventReview</p>
+  <div class="comment">
+   <span class="markdown">Review of an event.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#includes" title="http://example.org/def/base#includes">includes</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Hotel">
+  <h3>Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Hotel</p>
+  <div class="comment">
+   <span class="markdown">Hotel.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/dbo#Hotel" title="http://www.owl-ontologies.com/dbo#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hotelName" title="http://example.org/def/base#hotelName">hotelName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#hotelNightPrice" title="http://example.org/def/base#hotelNightPrice">hotelNightPrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#hotelReview" title="http://example.org/def/base#hotelReview">hotelReview</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hasHotel" title="http://example.org/def/base#hasHotel">hasHotel</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hotel1" title="http://example.org/def/base#hotel1">hotel1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/dbo#Hotel">
+  <h3>Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/dbo#Hotel</p>
+  <div class="comment">
+   <span class="markdown">Hotel.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Hotel" title="http://example.org/def/base#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hotelName" title="http://example.org/def/base#hotelName">hotelName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#hotelNightPrice" title="http://example.org/def/base#hotelNightPrice">hotelNightPrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#hotelReview" title="http://example.org/def/base#hotelReview">hotelReview</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hasHotel" title="http://example.org/def/base#hasHotel">hasHotel</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hotel1" title="http://example.org/def/base#hotel1">hotel1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#HotelReview">
+  <h3>HotelReview<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#HotelReview</p>
+  <div class="comment">
+   <span class="markdown">Review of a hotel.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#includes" title="http://example.org/def/base#includes">includes</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#IntelTour">
+  <h3>IntelTour<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#IntelTour</p>
+  <div class="comment">
+   <span class="markdown">Intelligent tour.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hasSummary" title="http://example.org/def/base#hasSummary">hasSummary</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#refersToCity" title="http://example.org/def/base#refersToCity">refersToCity</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Italian">
+  <h3>Italian<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Italian</p>
+  <div class="comment">
+   <span class="markdown">Italian cuisine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Cousine" title="http://example.org/def/base#Cousine">Cousine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Andalussian" title="http://example.org/def/base#Andalussian">Andalussian</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Japanese" title="http://example.org/def/base#Japanese">Japanese</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Mediterranean" title="http://example.org/def/base#Mediterranean">Mediterranean</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Mexican" title="http://example.org/def/base#Mexican">Mexican</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Japanese">
+  <h3>Japanese<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Japanese</p>
+  <div class="comment">
+   <span class="markdown">Japanese cuisine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Cousine" title="http://example.org/def/base#Cousine">Cousine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Andalussian" title="http://example.org/def/base#Andalussian">Andalussian</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Italian" title="http://example.org/def/base#Italian">Italian</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Mediterranean" title="http://example.org/def/base#Mediterranean">Mediterranean</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Mexican" title="http://example.org/def/base#Mexican">Mexican</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Mediterranean">
+  <h3>Mediterranean<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Mediterranean</p>
+  <div class="comment">
+   <span class="markdown">Mediterranean cuisine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Cousine" title="http://example.org/def/base#Cousine">Cousine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Andalussian" title="http://example.org/def/base#Andalussian">Andalussian</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Italian" title="http://example.org/def/base#Italian">Italian</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Japanese" title="http://example.org/def/base#Japanese">Japanese</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Mexican" title="http://example.org/def/base#Mexican">Mexican</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Mexican">
+  <h3>Mexican<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Mexican</p>
+  <div class="comment">
+   <span class="markdown">Mexican cuisine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Cousine" title="http://example.org/def/base#Cousine">Cousine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Andalussian" title="http://example.org/def/base#Andalussian">Andalussian</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Italian" title="http://example.org/def/base#Italian">Italian</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Japanese" title="http://example.org/def/base#Japanese">Japanese</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#Mediterranean" title="http://example.org/def/base#Mediterranean">Mediterranean</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/foaf#Person">
+  <h3>Person<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/foaf#Person</p>
+  <div class="comment">
+   <span class="markdown">Person.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Restaurant">
+  <h3>Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Restaurant</p>
+  <div class="comment">
+   <span class="markdown">Restaurant.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#restaurantAvgPrice" title="http://example.org/def/base#restaurantAvgPrice">restaurantAvgPrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#restaurantIn" title="http://example.org/def/base#restaurantIn">restaurantIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#restaurantName" title="http://example.org/def/base#restaurantName">restaurantName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#restaurantReview" title="http://example.org/def/base#restaurantReview">restaurantReview</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#servesCousine" title="http://example.org/def/base#servesCousine">servesCousine</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hasRestaurant" title="http://example.org/def/base#hasRestaurant">hasRestaurant</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#restaurant1" title="http://example.org/def/base#restaurant1">restaurant1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#RestaurantReview">
+  <h3>RestaurantReview<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#RestaurantReview</p>
+  <div class="comment">
+   <span class="markdown">Review of a restaurant.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#includes" title="http://example.org/def/base#includes">includes</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Review">
+  <h3>Review<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Review</p>
+  <div class="comment">
+   <span class="markdown">Review.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#AttractionReview" title="http://example.org/def/base#AttractionReview">AttractionReview</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#EventReview" title="http://example.org/def/base#EventReview">EventReview</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#HotelReview" title="http://example.org/def/base#HotelReview">HotelReview</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#RestaurantReview" title="http://example.org/def/base#RestaurantReview">RestaurantReview</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/def/base#TransportReview" title="http://example.org/def/base#TransportReview">TransportReview</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#attractionReview" title="http://example.org/def/base#attractionReview">attractionReview</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#eventReview" title="http://example.org/def/base#eventReview">eventReview</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#hotelReview" title="http://example.org/def/base#hotelReview">hotelReview</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#restaurantReview" title="http://example.org/def/base#restaurantReview">restaurantReview</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#transportReview" title="http://example.org/def/base#transportReview">transportReview</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#review1" title="http://example.org/def/base#review1">review1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Reviewer">
+  <h3>Reviewer<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Reviewer</p>
+  <div class="comment">
+   <span class="markdown">Person who writes reviews.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/foaf#Person" title="http://www.owl-ontologies.com/foaf#Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Summary">
+  <h3>Summary<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Summary</p>
+  <div class="comment">
+   <span class="markdown">Summary of an intelligent tour.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#includes" title="http://example.org/def/base#includes">includes</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hasSummary" title="http://example.org/def/base#hasSummary">hasSummary</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#Transport">
+  <h3>Transport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Transport</p>
+  <div class="comment">
+   <span class="markdown">Transport.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#transportAvgPrice" title="http://example.org/def/base#transportAvgPrice">transportAvgPrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#transportIn" title="http://example.org/def/base#transportIn">transportIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#transportProvider" title="http://example.org/def/base#transportProvider">transportProvider</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/def/base#transportReview" title="http://example.org/def/base#transportReview">transportReview</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/def/base#transportType" title="http://example.org/def/base#transportType">transportType</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hasTransport" title="http://example.org/def/base#hasTransport">hasTransport</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#TransportReview">
+  <h3>TransportReview<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#TransportReview</p>
+  <div class="comment">
+   <span class="markdown">Review of a transport.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#includes" title="http://example.org/def/base#includes">includes</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://example.org/def/base#attractionIn" title="http://example.org/def/base#attractionIn">attractionIn</a></li>
+  <li><a href="#http://example.org/def/base#attractionReview" title="http://example.org/def/base#attractionReview">attractionReview</a></li>
+  <li><a href="#http://example.org/def/base#eventIn" title="http://example.org/def/base#eventIn">eventIn</a></li>
+  <li><a href="#http://example.org/def/base#eventReview" title="http://example.org/def/base#eventReview">eventReview</a></li>
+  <li><a href="#http://example.org/def/base#hasAttraction" title="http://example.org/def/base#hasAttraction">hasAttraction</a></li>
+  <li><a href="#http://example.org/def/base#hasEvent" title="http://example.org/def/base#hasEvent">hasEvent</a></li>
+  <li><a href="#http://example.org/def/base#hasHotel" title="http://example.org/def/base#hasHotel">hasHotel</a></li>
+  <li><a href="#http://example.org/def/base#hasRestaurant" title="http://example.org/def/base#hasRestaurant">hasRestaurant</a></li>
+  <li><a href="#http://example.org/def/base#hasSummary" title="http://example.org/def/base#hasSummary">hasSummary</a></li>
+  <li><a href="#http://example.org/def/base#hasTransport" title="http://example.org/def/base#hasTransport">hasTransport</a></li>
+  <li><a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a></li>
+  <li><a href="#http://example.org/def/base#hotelReview" title="http://example.org/def/base#hotelReview">hotelReview</a></li>
+  <li><a href="#http://example.org/def/base#includes" title="http://example.org/def/base#includes">includes</a></li>
+  <li><a href="#http://example.org/def/base#refersToCity" title="http://example.org/def/base#refersToCity">refersToCity</a></li>
+  <li><a href="#http://example.org/def/base#restaurantIn" title="http://example.org/def/base#restaurantIn">restaurantIn</a></li>
+  <li><a href="#http://example.org/def/base#restaurantReview" title="http://example.org/def/base#restaurantReview">restaurantReview</a></li>
+  <li><a href="#http://example.org/def/base#servesCousine" title="http://example.org/def/base#servesCousine">servesCousine</a></li>
+  <li><a href="#http://example.org/def/base#transportIn" title="http://example.org/def/base#transportIn">transportIn</a></li>
+  <li><a href="#http://example.org/def/base#transportReview" title="http://example.org/def/base#transportReview">transportReview</a></li>
+  <li><a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a></li>
+  <li><a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a></li>
+ </ul>
+ <div class="entity" id="http://example.org/def/base#attractionIn">
+  <h3>attractionIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#attractionIn</p>
+  <div class="comment">
+   <span class="markdown">Relationship between an attraction and a city.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Attraction" title="http://example.org/def/base#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionIn" title="http://example.org/def/base#attractionIn">attractionIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionName" title="http://example.org/def/base#attractionName">attractionName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionType" title="http://example.org/def/base#attractionType">attractionType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#attractionReview">
+  <h3>attractionReview<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#attractionReview</p>
+  <div class="comment">
+   <span class="markdown">Relationship between an attraction and a review.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Attraction" title="http://example.org/def/base#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionIn" title="http://example.org/def/base#attractionIn">attractionIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionName" title="http://example.org/def/base#attractionName">attractionName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionType" title="http://example.org/def/base#attractionType">attractionType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">only</span> <a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#eventIn">
+  <h3>eventIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#eventIn</p>
+  <div class="comment">
+   <span class="markdown">Relationship between an event and a city.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Event" title="http://example.org/def/base#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventIn" title="http://example.org/def/base#eventIn">eventIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventDate" title="http://example.org/def/base#eventDate">eventDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventName" title="http://example.org/def/base#eventName">eventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventType" title="http://example.org/def/base#eventType">eventType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#eventReview">
+  <h3>eventReview<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#eventReview</p>
+  <div class="comment">
+   <span class="markdown">Relationship between an event and a review.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Event" title="http://example.org/def/base#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventIn" title="http://example.org/def/base#eventIn">eventIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventDate" title="http://example.org/def/base#eventDate">eventDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventName" title="http://example.org/def/base#eventName">eventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventType" title="http://example.org/def/base#eventType">eventType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">only</span> <a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hasAttraction">
+  <h3>hasAttraction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hasAttraction</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a city and an attraction.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Attraction" title="http://example.org/def/base#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionIn" title="http://example.org/def/base#attractionIn">attractionIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionName" title="http://example.org/def/base#attractionName">attractionName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionType" title="http://example.org/def/base#attractionType">attractionType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hasEvent">
+  <h3>hasEvent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hasEvent</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a city and an event.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Event" title="http://example.org/def/base#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventIn" title="http://example.org/def/base#eventIn">eventIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventDate" title="http://example.org/def/base#eventDate">eventDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventName" title="http://example.org/def/base#eventName">eventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventType" title="http://example.org/def/base#eventType">eventType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hasHotel">
+  <h3>hasHotel<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hasHotel</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a city and a hotel.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Hotel" title="http://example.org/def/base#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#Hotel" title="http://www.owl-ontologies.com/dbo#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelName" title="http://example.org/def/base#hotelName">hotelName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelNightPrice" title="http://example.org/def/base#hotelNightPrice">hotelNightPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hasRestaurant">
+  <h3>hasRestaurant<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hasRestaurant</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a city and a restaurant.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Restaurant" title="http://example.org/def/base#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantIn" title="http://example.org/def/base#restaurantIn">restaurantIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#servesCousine" title="http://example.org/def/base#servesCousine">servesCousine</a> <sup class="type-op" title="object property">op</sup> <span class="logic">max</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantAvgPrice" title="http://example.org/def/base#restaurantAvgPrice">restaurantAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantName" title="http://example.org/def/base#restaurantName">restaurantName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hasSummary">
+  <h3>hasSummary<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hasSummary</p>
+  <div class="comment">
+   <span class="markdown">Relationship between an intelligent tour and a summary.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#IntelTour" title="http://example.org/def/base#IntelTour">IntelTour</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hasSummary" title="http://example.org/def/base#hasSummary">hasSummary</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#refersToCity" title="http://example.org/def/base#refersToCity">refersToCity</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Summary" title="http://example.org/def/base#Summary">Summary</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#includes" title="http://example.org/def/base#includes">includes</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#includes" title="http://example.org/def/base#includes">includes</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hasTransport">
+  <h3>hasTransport<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hasTransport</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a city and a transport.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Transport" title="http://example.org/def/base#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportIn" title="http://example.org/def/base#transportIn">transportIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportAvgPrice" title="http://example.org/def/base#transportAvgPrice">transportAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportProvider" title="http://example.org/def/base#transportProvider">transportProvider</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportType" title="http://example.org/def/base#transportType">transportType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hotelIn">
+  <h3>hotelIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hotelIn</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a hotel and a city.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Hotel" title="http://example.org/def/base#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#Hotel" title="http://www.owl-ontologies.com/dbo#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelName" title="http://example.org/def/base#hotelName">hotelName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelNightPrice" title="http://example.org/def/base#hotelNightPrice">hotelNightPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hotelReview">
+  <h3>hotelReview<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hotelReview</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a hotel and a review.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Hotel" title="http://example.org/def/base#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#Hotel" title="http://www.owl-ontologies.com/dbo#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelName" title="http://example.org/def/base#hotelName">hotelName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelNightPrice" title="http://example.org/def/base#hotelNightPrice">hotelNightPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">only</span> <a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#includes">
+  <h3>includes<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#includes</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a summary and the included reviews.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Summary" title="http://example.org/def/base#Summary">Summary</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#includes" title="http://example.org/def/base#includes">includes</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#includes" title="http://example.org/def/base#includes">includes</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#AttractionReview" title="http://example.org/def/base#AttractionReview">AttractionReview</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://example.org/def/base#EventReview" title="http://example.org/def/base#EventReview">EventReview</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://example.org/def/base#HotelReview" title="http://example.org/def/base#HotelReview">HotelReview</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://example.org/def/base#RestaurantReview" title="http://example.org/def/base#RestaurantReview">RestaurantReview</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://example.org/def/base#TransportReview" title="http://example.org/def/base#TransportReview">TransportReview</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#refersToCity">
+  <h3>refersToCity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#refersToCity</p>
+  <div class="comment">
+   <span class="markdown">Relationship between an intelligent tour and a city.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#IntelTour" title="http://example.org/def/base#IntelTour">IntelTour</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hasSummary" title="http://example.org/def/base#hasSummary">hasSummary</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#refersToCity" title="http://example.org/def/base#refersToCity">refersToCity</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#restaurantIn">
+  <h3>restaurantIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#restaurantIn</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a restaurant and a city.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Restaurant" title="http://example.org/def/base#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantIn" title="http://example.org/def/base#restaurantIn">restaurantIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#servesCousine" title="http://example.org/def/base#servesCousine">servesCousine</a> <sup class="type-op" title="object property">op</sup> <span class="logic">max</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantAvgPrice" title="http://example.org/def/base#restaurantAvgPrice">restaurantAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantName" title="http://example.org/def/base#restaurantName">restaurantName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#restaurantReview">
+  <h3>restaurantReview<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#restaurantReview</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a restaurant and a review.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Restaurant" title="http://example.org/def/base#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantIn" title="http://example.org/def/base#restaurantIn">restaurantIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#servesCousine" title="http://example.org/def/base#servesCousine">servesCousine</a> <sup class="type-op" title="object property">op</sup> <span class="logic">max</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantAvgPrice" title="http://example.org/def/base#restaurantAvgPrice">restaurantAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantName" title="http://example.org/def/base#restaurantName">restaurantName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">only</span> <a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#servesCousine">
+  <h3>servesCousine<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#servesCousine</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a restaurant and the type of cuisine it serves.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Restaurant" title="http://example.org/def/base#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantIn" title="http://example.org/def/base#restaurantIn">restaurantIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#servesCousine" title="http://example.org/def/base#servesCousine">servesCousine</a> <sup class="type-op" title="object property">op</sup> <span class="logic">max</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantAvgPrice" title="http://example.org/def/base#restaurantAvgPrice">restaurantAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantName" title="http://example.org/def/base#restaurantName">restaurantName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Cousine" title="http://example.org/def/base#Cousine">Cousine</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cousineName" title="http://example.org/def/base#cousineName">cousineName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">max</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#transportIn">
+  <h3>transportIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#transportIn</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a transport and a city.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Transport" title="http://example.org/def/base#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportIn" title="http://example.org/def/base#transportIn">transportIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportAvgPrice" title="http://example.org/def/base#transportAvgPrice">transportAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportProvider" title="http://example.org/def/base#transportProvider">transportProvider</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportType" title="http://example.org/def/base#transportType">transportType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#transportReview">
+  <h3>transportReview<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#transportReview</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a transport and a review.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Transport" title="http://example.org/def/base#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportIn" title="http://example.org/def/base#transportIn">transportIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportAvgPrice" title="http://example.org/def/base#transportAvgPrice">transportAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportProvider" title="http://example.org/def/base#transportProvider">transportProvider</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportType" title="http://example.org/def/base#transportType">transportType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">only</span> <a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#writtenBy">
+  <h3>writtenBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#writtenBy</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a review and its author.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">only</span> <a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/foaf#Person" title="http://www.owl-ontologies.com/foaf#Person">Person</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#writtenOn">
+  <h3>writtenOn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#writtenOn</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a review and the date it was written.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">only</span> <a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Date" title="http://example.org/def/base#Date">Date</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://example.org/def/base#attractionName" title="http://example.org/def/base#attractionName">attractionName</a></li>
+  <li><a href="#http://example.org/def/base#attractionType" title="http://example.org/def/base#attractionType">attractionType</a></li>
+  <li><a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a></li>
+  <li><a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a></li>
+  <li><a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a></li>
+  <li><a href="#http://example.org/def/base#cousineName" title="http://example.org/def/base#cousineName">cousineName</a></li>
+  <li><a href="#http://example.org/def/base#eventDate" title="http://example.org/def/base#eventDate">eventDate</a></li>
+  <li><a href="#http://example.org/def/base#eventName" title="http://example.org/def/base#eventName">eventName</a></li>
+  <li><a href="#http://example.org/def/base#eventType" title="http://example.org/def/base#eventType">eventType</a></li>
+  <li><a href="#http://example.org/def/base#hotelName" title="http://example.org/def/base#hotelName">hotelName</a></li>
+  <li><a href="#http://example.org/def/base#hotelNightPrice" title="http://example.org/def/base#hotelNightPrice">hotelNightPrice</a></li>
+  <li><a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a></li>
+  <li><a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a></li>
+  <li><a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a></li>
+  <li><a href="#http://example.org/def/base#restaurantAvgPrice" title="http://example.org/def/base#restaurantAvgPrice">restaurantAvgPrice</a></li>
+  <li><a href="#http://example.org/def/base#restaurantName" title="http://example.org/def/base#restaurantName">restaurantName</a></li>
+  <li><a href="#http://example.org/def/base#transportAvgPrice" title="http://example.org/def/base#transportAvgPrice">transportAvgPrice</a></li>
+  <li><a href="#http://example.org/def/base#transportProvider" title="http://example.org/def/base#transportProvider">transportProvider</a></li>
+  <li><a href="#http://example.org/def/base#transportType" title="http://example.org/def/base#transportType">transportType</a></li>
+ </ul>
+ <div class="entity" id="http://example.org/def/base#attractionName">
+  <h3>attractionName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#attractionName</p>
+  <div class="comment">
+   <span class="markdown">Name of the attraction.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Attraction" title="http://example.org/def/base#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionIn" title="http://example.org/def/base#attractionIn">attractionIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionName" title="http://example.org/def/base#attractionName">attractionName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionType" title="http://example.org/def/base#attractionType">attractionType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#attractionType">
+  <h3>attractionType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#attractionType</p>
+  <div class="comment">
+   <span class="markdown">Type of the attraction.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Attraction" title="http://example.org/def/base#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionIn" title="http://example.org/def/base#attractionIn">attractionIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionName" title="http://example.org/def/base#attractionName">attractionName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#attractionType" title="http://example.org/def/base#attractionType">attractionType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#cityGeoLocation">
+  <h3>cityGeoLocation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#cityGeoLocation</p>
+  <div class="comment">
+   <span class="markdown">Geographical location of the city.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#cityName">
+  <h3>cityName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#cityName</p>
+  <div class="comment">
+   <span class="markdown">Name of the city.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#comment">
+  <h3>comment<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#comment</p>
+  <div class="comment">
+   <span class="markdown">Comment of the review.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">only</span> <a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#cousineName">
+  <h3>cousineName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#cousineName</p>
+  <div class="comment">
+   <span class="markdown">Name of the cuisine.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Cousine" title="http://example.org/def/base#Cousine">Cousine</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#cousineName" title="http://example.org/def/base#cousineName">cousineName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">max</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#eventDate">
+  <h3>eventDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#eventDate</p>
+  <div class="comment">
+   <span class="markdown">Date of the event.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Event" title="http://example.org/def/base#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventIn" title="http://example.org/def/base#eventIn">eventIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventDate" title="http://example.org/def/base#eventDate">eventDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventName" title="http://example.org/def/base#eventName">eventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventType" title="http://example.org/def/base#eventType">eventType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#eventName">
+  <h3>eventName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#eventName</p>
+  <div class="comment">
+   <span class="markdown">Name of the event.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Event" title="http://example.org/def/base#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventIn" title="http://example.org/def/base#eventIn">eventIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventDate" title="http://example.org/def/base#eventDate">eventDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventName" title="http://example.org/def/base#eventName">eventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventType" title="http://example.org/def/base#eventType">eventType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#eventType">
+  <h3>eventType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#eventType</p>
+  <div class="comment">
+   <span class="markdown">Type of the event.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Event" title="http://example.org/def/base#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventIn" title="http://example.org/def/base#eventIn">eventIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventDate" title="http://example.org/def/base#eventDate">eventDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventName" title="http://example.org/def/base#eventName">eventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#eventType" title="http://example.org/def/base#eventType">eventType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hotelName">
+  <h3>hotelName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hotelName</p>
+  <div class="comment">
+   <span class="markdown">Name of the hotel.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Hotel" title="http://example.org/def/base#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#Hotel" title="http://www.owl-ontologies.com/dbo#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelName" title="http://example.org/def/base#hotelName">hotelName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelNightPrice" title="http://example.org/def/base#hotelNightPrice">hotelNightPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hotelNightPrice">
+  <h3>hotelNightPrice<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hotelNightPrice</p>
+  <div class="comment">
+   <span class="markdown">Nightly price of the hotel.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Hotel" title="http://example.org/def/base#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#Hotel" title="http://www.owl-ontologies.com/dbo#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelName" title="http://example.org/def/base#hotelName">hotelName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelNightPrice" title="http://example.org/def/base#hotelNightPrice">hotelNightPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hotelStars">
+  <h3>hotelStars<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hotelStars</p>
+  <div class="comment">
+   <span class="markdown">Number of stars of the hotel.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Hotel" title="http://example.org/def/base#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#Hotel" title="http://www.owl-ontologies.com/dbo#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelName" title="http://example.org/def/base#hotelName">hotelName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelNightPrice" title="http://example.org/def/base#hotelNightPrice">hotelNightPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hotelType">
+  <h3>hotelType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hotelType</p>
+  <div class="comment">
+   <span class="markdown">Type of the hotel.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Hotel" title="http://example.org/def/base#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/dbo#Hotel" title="http://www.owl-ontologies.com/dbo#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelName" title="http://example.org/def/base#hotelName">hotelName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelNightPrice" title="http://example.org/def/base#hotelNightPrice">hotelNightPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#rating">
+  <h3>rating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#rating</p>
+  <div class="comment">
+   <span class="markdown">Rating of the review.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">only</span> <a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#restaurantAvgPrice">
+  <h3>restaurantAvgPrice<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#restaurantAvgPrice</p>
+  <div class="comment">
+   <span class="markdown">Average price of the restaurant.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Restaurant" title="http://example.org/def/base#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantIn" title="http://example.org/def/base#restaurantIn">restaurantIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#servesCousine" title="http://example.org/def/base#servesCousine">servesCousine</a> <sup class="type-op" title="object property">op</sup> <span class="logic">max</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantAvgPrice" title="http://example.org/def/base#restaurantAvgPrice">restaurantAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantName" title="http://example.org/def/base#restaurantName">restaurantName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#restaurantName">
+  <h3>restaurantName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#restaurantName</p>
+  <div class="comment">
+   <span class="markdown">Name of the restaurant.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Restaurant" title="http://example.org/def/base#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantIn" title="http://example.org/def/base#restaurantIn">restaurantIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#servesCousine" title="http://example.org/def/base#servesCousine">servesCousine</a> <sup class="type-op" title="object property">op</sup> <span class="logic">max</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantAvgPrice" title="http://example.org/def/base#restaurantAvgPrice">restaurantAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#restaurantName" title="http://example.org/def/base#restaurantName">restaurantName</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#transportAvgPrice">
+  <h3>transportAvgPrice<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#transportAvgPrice</p>
+  <div class="comment">
+   <span class="markdown">Average price of the transport.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Transport" title="http://example.org/def/base#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportIn" title="http://example.org/def/base#transportIn">transportIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportAvgPrice" title="http://example.org/def/base#transportAvgPrice">transportAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportProvider" title="http://example.org/def/base#transportProvider">transportProvider</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportType" title="http://example.org/def/base#transportType">transportType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#transportProvider">
+  <h3>transportProvider<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#transportProvider</p>
+  <div class="comment">
+   <span class="markdown">Provider of the transport.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Transport" title="http://example.org/def/base#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportIn" title="http://example.org/def/base#transportIn">transportIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportAvgPrice" title="http://example.org/def/base#transportAvgPrice">transportAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportProvider" title="http://example.org/def/base#transportProvider">transportProvider</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportType" title="http://example.org/def/base#transportType">transportType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/def/base#transportType">
+  <h3>transportType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#transportType</p>
+  <div class="comment">
+   <span class="markdown">Type of the transport.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/def/base#Transport" title="http://example.org/def/base#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportIn" title="http://example.org/def/base#transportIn">transportIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportAvgPrice" title="http://example.org/def/base#transportAvgPrice">transportAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportProvider" title="http://example.org/def/base#transportProvider">transportProvider</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dd>
+     <a href="#http://example.org/def/base#transportType" title="http://example.org/def/base#transportType">transportType</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">exactly</span> 1
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e4610">Rule 1</a></li>
+  <li><a href="#d4e4843">Rule 2</a></li>
+  <li><a href="#d4e4735">Rule 3</a></li>
+ </ul>
+ <div class="entity" id="d4e4610">
+  <h3>Rule 1<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>If a hotel has 4 stars or more, then its type is "Luxury".<br><br><a href="#http://example.org/def/base#Hotel" title="http://example.org/def/base#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>(?h) , <a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a> <sup class="type-dp" title="data property">dp</sup>(?h,?s) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) -&gt; <a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a> <sup class="type-dp" title="data property">dp</sup>(?h,"Luxury")</p>
+ </div>
+ <div class="entity" id="d4e4843">
+  <h3>Rule 2<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>If a review has a rating of 3 or more, then its comment is "Positive”.<br><br><a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>(?r) , <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a> <sup class="type-dp" title="data property">dp</sup>(?r,?v) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) -&gt; <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a> <sup class="type-dp" title="data property">dp</sup>(?r,"Positive")</p>
+ </div>
+ <div class="entity" id="d4e4735">
+  <h3>Rule 3<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>If the name of a restaurant is "PizzPass", then the name of its cousine is "Italian".<br><br><a href="#http://example.org/def/base#Restaurant" title="http://example.org/def/base#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>(?r) , <a href="#http://example.org/def/base#restaurantName" title="http://example.org/def/base#restaurantName">restaurantName</a> <sup class="type-dp" title="data property">dp</sup>(?r,"PizzPass") , <a href="#http://example.org/def/base#servesCousine" title="http://example.org/def/base#servesCousine">servesCousine</a> <sup class="type-op" title="object property">op</sup>(?r,?c) -&gt; <a href="#http://example.org/def/base#cousineName" title="http://example.org/def/base#cousineName">cousineName</a> <sup class="type-dp" title="data property">dp</sup>(?c,"Italian")</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
