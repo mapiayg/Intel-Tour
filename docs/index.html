@@ -86,11 +86,12 @@ $(function(){
 <dt>Contributors:</dt>
 <dd><a href="https://w3id.org/people#AContributorURI">https://w3id.org/people#AContributorURI</a></dd>
 
-<dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
 <a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
 <img src="null" style="border-width:0" alt="License" />
 </a>
-<br/></dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
 <dd>https://w3id.org/people#AuthorURI. The Intel-Tour ontology. Revision: 0.0.1. Retrieved from: https://w3id.org/example/1.0.1</dd>
 </dl>
 
@@ -108,6 +109,344 @@ The Intel-Tour ontology is designed to facilitate the planning and recommendatio
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">The Intel-Tour ontology defines a comprehensive model for representing tourist activities and related entities. It includes classes for cities, attractions, events, hotels, restaurants, transportation and reviews. This ontology aims to enhance the interoperability and accessibility of tourist information, making it easier to plan and recommend activities based on user preferences and reviews.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">The Intel-Tour ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://example.org/def/base#Andalussian" title="http://example.org/def/base#Andalussian">Andalussian</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Attraction" title="http://example.org/def/base#Attraction">Attraction</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#AttractionReview" title="http://example.org/def/base#AttractionReview">AttractionReview</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Cousine" title="http://example.org/def/base#Cousine">Cousine</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Date" title="http://example.org/def/base#Date">Date</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Event" title="http://example.org/def/base#Event">Event</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#EventReview" title="http://example.org/def/base#EventReview">EventReview</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Hotel" title="http://example.org/def/base#Hotel">Hotel</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/dbo#Hotel" title="http://www.owl-ontologies.com/dbo#Hotel">Hotel</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#HotelReview" title="http://example.org/def/base#HotelReview">HotelReview</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#IntelTour" title="http://example.org/def/base#IntelTour">IntelTour</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Italian" title="http://example.org/def/base#Italian">Italian</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Japanese" title="http://example.org/def/base#Japanese">Japanese</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Mediterranean" title="http://example.org/def/base#Mediterranean">Mediterranean</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Mexican" title="http://example.org/def/base#Mexican">Mexican</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/foaf#Person" title="http://www.owl-ontologies.com/foaf#Person">Person</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Restaurant" title="http://example.org/def/base#Restaurant">Restaurant</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#RestaurantReview" title="http://example.org/def/base#RestaurantReview">RestaurantReview</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Reviewer" title="http://example.org/def/base#Reviewer">Reviewer</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Summary" title="http://example.org/def/base#Summary">Summary</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#Transport" title="http://example.org/def/base#Transport">Transport</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#TransportReview" title="http://example.org/def/base#TransportReview">TransportReview</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://example.org/def/base#attractionIn" title="http://example.org/def/base#attractionIn">attractionIn</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#attractionReview" title="http://example.org/def/base#attractionReview">attractionReview</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#eventIn" title="http://example.org/def/base#eventIn">eventIn</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#eventReview" title="http://example.org/def/base#eventReview">eventReview</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hasAttraction" title="http://example.org/def/base#hasAttraction">hasAttraction</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hasEvent" title="http://example.org/def/base#hasEvent">hasEvent</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hasHotel" title="http://example.org/def/base#hasHotel">hasHotel</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hasRestaurant" title="http://example.org/def/base#hasRestaurant">hasRestaurant</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hasSummary" title="http://example.org/def/base#hasSummary">hasSummary</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hasTransport" title="http://example.org/def/base#hasTransport">hasTransport</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hotelIn" title="http://example.org/def/base#hotelIn">hotelIn</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hotelReview" title="http://example.org/def/base#hotelReview">hotelReview</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#includes" title="http://example.org/def/base#includes">includes</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#refersToCity" title="http://example.org/def/base#refersToCity">refersToCity</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#restaurantIn" title="http://example.org/def/base#restaurantIn">restaurantIn</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#restaurantReview" title="http://example.org/def/base#restaurantReview">restaurantReview</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#servesCousine" title="http://example.org/def/base#servesCousine">servesCousine</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#transportIn" title="http://example.org/def/base#transportIn">transportIn</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#transportReview" title="http://example.org/def/base#transportReview">transportReview</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#writtenBy" title="http://example.org/def/base#writtenBy">writtenBy</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#writtenOn" title="http://example.org/def/base#writtenOn">writtenOn</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://example.org/def/base#attractionName" title="http://example.org/def/base#attractionName">attractionName</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#attractionType" title="http://example.org/def/base#attractionType">attractionType</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#cityGeoLocation" title="http://example.org/def/base#cityGeoLocation">cityGeoLocation</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#cityName" title="http://example.org/def/base#cityName">cityName</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#cousineName" title="http://example.org/def/base#cousineName">cousineName</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#eventDate" title="http://example.org/def/base#eventDate">eventDate</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#eventName" title="http://example.org/def/base#eventName">eventName</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#eventType" title="http://example.org/def/base#eventType">eventType</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hotelName" title="http://example.org/def/base#hotelName">hotelName</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hotelNightPrice" title="http://example.org/def/base#hotelNightPrice">hotelNightPrice</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#restaurantAvgPrice" title="http://example.org/def/base#restaurantAvgPrice">restaurantAvgPrice</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#restaurantName" title="http://example.org/def/base#restaurantName">restaurantName</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#transportAvgPrice" title="http://example.org/def/base#transportAvgPrice">transportAvgPrice</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#transportProvider" title="http://example.org/def/base#transportProvider">transportProvider</a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#transportType" title="http://example.org/def/base#transportType">transportType</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
+         <span>contributor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/mod#createdWith" title="https://w3id.org/mod#createdWith">
+         <span>created With</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+         title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+         <span>is Rule Enabled</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#priorVersion" title="http://www.w3.org/2002/07/owl#priorVersion">
+         <span>prior Version</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#versionIRI" title="http://www.w3.org/2002/07/owl#versionIRI">
+         <span>version I R I</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#versionInfo" title="http://www.w3.org/2002/07/owl#versionInfo">
+         <span>version Info</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://example.org/def/base#attraction1" title="http://example.org/def/base#attraction1">
+         <span>attraction1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#city1" title="http://example.org/def/base#city1">
+         <span>city1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#cousine1" title="http://example.org/def/base#cousine1">
+         <span>cousine1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#event1" title="http://example.org/def/base#event1">
+         <span>event1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#hotel1" title="http://example.org/def/base#hotel1">
+         <span>hotel1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#restaurant1" title="http://example.org/def/base#restaurant1">
+         <span>restaurant1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://example.org/def/base#review1" title="http://example.org/def/base#review1">
+         <span>review1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Sevilla" title="https://w3id.org/example#Sevilla">
+         <span>Sevilla</span>
+      </a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e4610">Rule 1</a>
+   </li>
+   <li>
+      <a href="#d4e4843">Rule 2</a>
+   </li>
+   <li>
+      <a href="#d4e4735">Rule 3</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
 </div>
   
 
@@ -2424,6 +2763,255 @@ This section provides details for each class and property defined by The Intel-T
    </dl>
   </div>
  </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor"> <span>contributor</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#https://w3id.org/mod#createdWith" title="https://w3id.org/mod#createdWith"> <span>created With</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"> <span>is Rule Enabled</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#priorVersion" title="http://www.w3.org/2002/07/owl#priorVersion"> <span>prior Version</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#versionIRI" title="http://www.w3.org/2002/07/owl#versionIRI"> <span>version I R I</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#versionInfo" title="http://www.w3.org/2002/07/owl#versionInfo"> <span>version Info</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/contributor">
+  <h3>contributor<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/contributor</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="https://w3id.org/mod#createdWith">
+  <h3>created With<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/mod#createdWith</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+  <h3>is Rule Enabled<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#priorVersion">
+  <h3>prior Version<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#priorVersion</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#versionIRI">
+  <h3>version I R I<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#versionIRI</p>
+  <div class="comment">
+   <span class="markdown">Annotation property for version IRI.</span>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#versionInfo">
+  <h3>version Info<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#versionInfo</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#http://example.org/def/base#attraction1" title="http://example.org/def/base#attraction1"> <span>attraction1</span> </a></li>
+  <li><a href="#http://example.org/def/base#city1" title="http://example.org/def/base#city1"> <span>city1</span> </a></li>
+  <li><a href="#http://example.org/def/base#cousine1" title="http://example.org/def/base#cousine1"> <span>cousine1</span> </a></li>
+  <li><a href="#http://example.org/def/base#event1" title="http://example.org/def/base#event1"> <span>event1</span> </a></li>
+  <li><a href="#http://example.org/def/base#hotel1" title="http://example.org/def/base#hotel1"> <span>hotel1</span> </a></li>
+  <li><a href="#http://example.org/def/base#restaurant1" title="http://example.org/def/base#restaurant1"> <span>restaurant1</span> </a></li>
+  <li><a href="#http://example.org/def/base#review1" title="http://example.org/def/base#review1"> <span>review1</span> </a></li>
+  <li><a href="#Sevilla" title="https://w3id.org/example#Sevilla"> <span>Sevilla</span> </a></li>
+ </ul>
+ <div class="entity" id="http://example.org/def/base#attraction1">
+  <h3>attraction1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#attraction1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Attraction" title="http://example.org/def/base#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd></dd>
+   <dd></dd>
+   <dd></dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#city1">
+  <h3>city1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#city1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#City" title="http://example.org/def/base#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/dbo#City" title="http://www.owl-ontologies.com/dbo#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd></dd>
+   <dd></dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#cousine1">
+  <h3>cousine1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#cousine1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Cousine" title="http://example.org/def/base#Cousine">Cousine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd></dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#cousineName" title="http://example.org/def/base#cousineName">cousineName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Italian"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#event1">
+  <h3>event1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#event1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Event" title="http://example.org/def/base#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd></dd>
+   <dd></dd>
+   <dd></dd>
+   <dd></dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#hotel1">
+  <h3>hotel1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#hotel1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Hotel" title="http://example.org/def/base#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/dbo#Hotel" title="http://www.owl-ontologies.com/dbo#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd></dd>
+   <dd></dd>
+   <dd></dd>
+   <dd></dd>
+   <dd></dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hotelName" title="http://example.org/def/base#hotelName">hotelName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"hotelName1"</span>
+   </dd>
+   <dd>
+    <a href="#http://example.org/def/base#hotelNightPrice" title="http://example.org/def/base#hotelNightPrice">hotelNightPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"100.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://example.org/def/base#hotelStars" title="http://example.org/def/base#hotelStars">hotelStars</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://example.org/def/base#hotelType" title="http://example.org/def/base#hotelType">hotelType</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Luxury"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#restaurant1">
+  <h3>restaurant1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#restaurant1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Restaurant" title="http://example.org/def/base#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd></dd>
+   <dd></dd>
+   <dd></dd>
+   <dd></dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#servesCousine" title="http://example.org/def/base#servesCousine">servesCousine</a> <sup class="type-op" title="object property">op</sup> <a href="#http://example.org/def/base#cousine1" title="http://example.org/def/base#cousine1">cousine1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://example.org/def/base#restaurantName" title="http://example.org/def/base#restaurantName">restaurantName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"PizzPass"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/def/base#review1">
+  <h3>review1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#review1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#Review" title="http://example.org/def/base#Review">Review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd></dd>
+   <dd></dd>
+   <dd></dd>
+   <dd></dd>
+   <dd></dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#comment" title="http://example.org/def/base#comment">comment</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Positive"</span>
+   </dd>
+   <dd>
+    <a href="#http://example.org/def/base#rating" title="http://example.org/def/base#rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Sevilla">
+  <h3>Sevilla<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/example#Sevilla</p>
+  <dl class="description">
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://example.org/def/base#hasHotel" title="http://example.org/def/base#hasHotel">hasHotel</a> <sup class="type-op" title="object property">op</sup> <a href="#http://example.org/def/base#hotel1" title="http://example.org/def/base#hotel1">hotel1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
  <h3 id="swrlrules" class="list">SWRL rules</h3>
  <ul class="hlist">
@@ -2449,8 +3037,620 @@ This section provides details for each class and property defined by The Intel-T
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
 <sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
 </div>
 </div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   <div id="changelog"><div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Added classes</u></summary>
+<ul><li><a href="#http://example.org/def/base#Andalussian">http://example.org/def/base#Andalussian</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;http://example.org/def/base#Andalussian&gt; &lt;http://example.org/def/base#Italian&gt; &lt;http://example.org/def/base#Japanese&gt; &lt;http://example.org/def/base#Mediterranean&gt; &lt;http://example.org/def/base#Mexican&gt;)</li>
+<li>Added: SubClass of http://example.org/def/base#Cousine</li>
+<li></ul>
+</li>
+<li><a href="#http://example.org/def/base#Attraction">http://example.org/def/base#Attraction</a>
+<ul>
+<li><li><li></ul>
+</li>
+<li><a href="#http://example.org/def/base#AttractionReview">http://example.org/def/base#AttractionReview</a>
+<ul>
+<li><li><li><li><li><li><li>Added: SubClass of http://example.org/def/base#Review</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#City">http://example.org/def/base#City</a>
+<ul>
+<li><li><li>Added: SubClass of http://www.owl-ontologies.com/dbo#City</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#Cousine">http://example.org/def/base#Cousine</a>
+<ul>
+<li></ul>
+</li>
+<li><a href="#http://example.org/def/base#Date">http://example.org/def/base#Date</a>
+</li>
+<li><a href="#http://example.org/def/base#Event">http://example.org/def/base#Event</a>
+<ul>
+<li><li><li><li></ul>
+</li>
+<li><a href="#http://example.org/def/base#EventReview">http://example.org/def/base#EventReview</a>
+<ul>
+<li><li><li><li>Added: SubClass of http://example.org/def/base#Review</li>
+<li><li><li></ul>
+</li>
+<li><a href="#http://example.org/def/base#Hotel">http://example.org/def/base#Hotel</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/dbo#Hotel</li>
+<li><li><li><li><li></ul>
+</li>
+<li><a href="#http://example.org/def/base#HotelReview">http://example.org/def/base#HotelReview</a>
+<ul>
+<li><li>Added: SubClass of http://example.org/def/base#Review</li>
+<li><li><li><li><li></ul>
+</li>
+<li><a href="#http://example.org/def/base#IntelTour">http://example.org/def/base#IntelTour</a>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#http://example.org/def/base#Italian">http://example.org/def/base#Italian</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;http://example.org/def/base#Andalussian&gt; &lt;http://example.org/def/base#Italian&gt; &lt;http://example.org/def/base#Japanese&gt; &lt;http://example.org/def/base#Mediterranean&gt; &lt;http://example.org/def/base#Mexican&gt;)</li>
+<li>Added: SubClass of http://example.org/def/base#Cousine</li>
+<li></ul>
+</li>
+<li><a href="#http://example.org/def/base#Japanese">http://example.org/def/base#Japanese</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;http://example.org/def/base#Andalussian&gt; &lt;http://example.org/def/base#Italian&gt; &lt;http://example.org/def/base#Japanese&gt; &lt;http://example.org/def/base#Mediterranean&gt; &lt;http://example.org/def/base#Mexican&gt;)</li>
+<li>Added: SubClass of http://example.org/def/base#Cousine</li>
+<li></ul>
+</li>
+<li><a href="#http://example.org/def/base#Mediterranean">http://example.org/def/base#Mediterranean</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;http://example.org/def/base#Andalussian&gt; &lt;http://example.org/def/base#Italian&gt; &lt;http://example.org/def/base#Japanese&gt; &lt;http://example.org/def/base#Mediterranean&gt; &lt;http://example.org/def/base#Mexican&gt;)</li>
+<li><li>Added: SubClass of http://example.org/def/base#Cousine</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#Mexican">http://example.org/def/base#Mexican</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;http://example.org/def/base#Andalussian&gt; &lt;http://example.org/def/base#Italian&gt; &lt;http://example.org/def/base#Japanese&gt; &lt;http://example.org/def/base#Mediterranean&gt; &lt;http://example.org/def/base#Mexican&gt;)</li>
+<li><li>Added: SubClass of http://example.org/def/base#Cousine</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#Restaurant">http://example.org/def/base#Restaurant</a>
+<ul>
+<li><li><li><li></ul>
+</li>
+<li><a href="#http://example.org/def/base#RestaurantReview">http://example.org/def/base#RestaurantReview</a>
+<ul>
+<li><li><li><li><li><li>Added: SubClass of http://example.org/def/base#Review</li>
+<li></ul>
+</li>
+<li><a href="#http://example.org/def/base#Review">http://example.org/def/base#Review</a>
+<ul>
+<li><li><li><li><li></ul>
+</li>
+<li><a href="#http://example.org/def/base#Reviewer">http://example.org/def/base#Reviewer</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/foaf#Person</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#Summary">http://example.org/def/base#Summary</a>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#http://example.org/def/base#Transport">http://example.org/def/base#Transport</a>
+<ul>
+<li><li><li><li></ul>
+</li>
+<li><a href="#http://example.org/def/base#TransportReview">http://example.org/def/base#TransportReview</a>
+<ul>
+<li><li><li><li><li><li><li>Added: SubClass of http://example.org/def/base#Review</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/dbo#City">http://www.owl-ontologies.com/dbo#City</a>
+</li>
+<li><a href="#http://www.owl-ontologies.com/dbo#Hotel">http://www.owl-ontologies.com/dbo#Hotel</a>
+</li>
+<li><a href="#http://www.owl-ontologies.com/foaf#Person">http://www.owl-ontologies.com/foaf#Person</a>
+</li>
+<li><a href="#http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a>
+</li>
+</ul></details><details><summary><u>Deleted classes</u></summary>
+<ul><li><a href="#Organization">https://w3id.org/example#Organization</a>
+</li>
+<li><a href="#Researcher">https://w3id.org/example#Researcher</a>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#http://example.org/def/base#attractionIn">http://example.org/def/base#attractionIn</a>
+<ul>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain http://example.org/def/base#Attraction</li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: Range http://www.owl-ontologies.com/dbo#City</li>
+<li>Added: Range http://example.org/def/base#City</li>
+<li>Added: Range </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#attractionReview">http://example.org/def/base#attractionReview</a>
+<ul>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: Range http://example.org/def/base#Review</li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: domain http://example.org/def/base#Attraction</li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#eventIn">http://example.org/def/base#eventIn</a>
+<ul>
+<li>Added: Range http://www.owl-ontologies.com/dbo#City</li>
+<li>Added: domain http://example.org/def/base#Event</li>
+<li>Added: Range http://example.org/def/base#City</li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#eventReview">http://example.org/def/base#eventReview</a>
+<ul>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: domain http://example.org/def/base#Event</li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: Range http://example.org/def/base#Review</li>
+<li>Added: domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#hasAttraction">http://example.org/def/base#hasAttraction</a>
+<ul>
+<li>Added: domain http://www.owl-ontologies.com/dbo#City</li>
+<li>Added: Range </li>
+<li>Added: domain http://example.org/def/base#City</li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: Range http://example.org/def/base#Attraction</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#hasEvent">http://example.org/def/base#hasEvent</a>
+<ul>
+<li>Added: domain http://www.owl-ontologies.com/dbo#City</li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: domain http://example.org/def/base#City</li>
+<li>Added: Range http://example.org/def/base#Event</li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#hasHotel">http://example.org/def/base#hasHotel</a>
+<ul>
+<li>Added: domain http://www.owl-ontologies.com/dbo#City</li>
+<li>Added: Range http://www.owl-ontologies.com/dbo#Hotel</li>
+<li>Added: domain </li>
+<li>Added: Range http://example.org/def/base#Hotel</li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: domain http://example.org/def/base#City</li>
+<li>Added: Range </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#hasRestaurant">http://example.org/def/base#hasRestaurant</a>
+<ul>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: domain http://www.owl-ontologies.com/dbo#City</li>
+<li>Added: Range </li>
+<li>Added: domain http://example.org/def/base#City</li>
+<li>Added: Range </li>
+<li>Added: Range http://example.org/def/base#Restaurant</li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#hasSummary">http://example.org/def/base#hasSummary</a>
+<ul>
+<li>Added: domain </li>
+<li>Added: Range http://example.org/def/base#Summary</li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: domain http://example.org/def/base#IntelTour</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#hasTransport">http://example.org/def/base#hasTransport</a>
+<ul>
+<li>Added: domain </li>
+<li>Added: domain http://example.org/def/base#City</li>
+<li>Added: Range http://example.org/def/base#Transport</li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: domain http://www.owl-ontologies.com/dbo#City</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#hotelIn">http://example.org/def/base#hotelIn</a>
+<ul>
+<li>Added: Range http://www.owl-ontologies.com/dbo#City</li>
+<li>Added: Range http://example.org/def/base#City</li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain http://example.org/def/base#Hotel</li>
+<li>Added: domain </li>
+<li>Added: domain http://www.owl-ontologies.com/dbo#Hotel</li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#hotelReview">http://example.org/def/base#hotelReview</a>
+<ul>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: Range http://example.org/def/base#Review</li>
+<li>Added: Range </li>
+<li>Added: domain http://example.org/def/base#Hotel</li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain http://www.owl-ontologies.com/dbo#Hotel</li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#includes">http://example.org/def/base#includes</a>
+<ul>
+<li>Added: Range Union of (http://example.org/def/base#AttractionReview, http://example.org/def/base#EventReview, http://example.org/def/base#HotelReview, http://example.org/def/base#RestaurantReview, http://example.org/def/base#TransportReview)</li>
+<li>Added: domain http://example.org/def/base#Summary</li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#refersToCity">http://example.org/def/base#refersToCity</a>
+<ul>
+<li>Added: Range </li>
+<li>Added: Range http://www.owl-ontologies.com/dbo#City</li>
+<li>Added: Range http://example.org/def/base#City</li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain http://example.org/def/base#IntelTour</li>
+<li>Added: Range </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#restaurantIn">http://example.org/def/base#restaurantIn</a>
+<ul>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: domain http://example.org/def/base#Restaurant</li>
+<li>Added: domain </li>
+<li>Added: Range http://example.org/def/base#City</li>
+<li>Added: Range http://www.owl-ontologies.com/dbo#City</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#restaurantReview">http://example.org/def/base#restaurantReview</a>
+<ul>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: Range http://example.org/def/base#Review</li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: domain http://example.org/def/base#Restaurant</li>
+<li>Added: domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#servesCousine">http://example.org/def/base#servesCousine</a>
+<ul>
+<li>Added: domain http://example.org/def/base#Restaurant</li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: Range http://example.org/def/base#Cousine</li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#transportIn">http://example.org/def/base#transportIn</a>
+<ul>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: Range http://www.owl-ontologies.com/dbo#City</li>
+<li>Added: Range http://example.org/def/base#City</li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain http://example.org/def/base#Transport</li>
+<li>Added: Range </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#transportReview">http://example.org/def/base#transportReview</a>
+<ul>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: Range </li>
+<li>Added: domain </li>
+<li>Added: Range http://example.org/def/base#Review</li>
+<li>Added: domain http://example.org/def/base#Transport</li>
+<li>Added: Range </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#writtenBy">http://example.org/def/base#writtenBy</a>
+<ul>
+<li>Added: Range http://www.owl-ontologies.com/foaf#Person</li>
+<li>Added: domain </li>
+<li>Added: domain http://example.org/def/base#Review</li>
+<li>Added: Range http://example.org/def/base#Reviewer</li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#writtenOn">http://example.org/def/base#writtenOn</a>
+<ul>
+<li>Added: Range http://example.org/def/base#Date</li>
+<li>Added: domain http://example.org/def/base#Review</li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+<li>Added: domain </li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted object properties</u></summary>
+<ul><li><a href="#hasMember">https://w3id.org/example#hasMember</a>
+</li>
+<li><a href="#partOf">https://w3id.org/example#partOf</a>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Added data properties</u></summary>
+<ul><li><a href="#http://example.org/def/base#attractionName">http://example.org/def/base#attractionName</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#Attraction</li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#attractionType">http://example.org/def/base#attractionType</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#Attraction</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#cityGeoLocation">http://example.org/def/base#cityGeoLocation</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#City</li>
+<li>Added: Domain http://www.owl-ontologies.com/dbo#City</li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#cityName">http://example.org/def/base#cityName</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain </li>
+<li>Added: Domain http://www.owl-ontologies.com/dbo#City</li>
+<li>Added: Domain http://example.org/def/base#City</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#comment">http://example.org/def/base#comment</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#Review</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#cousineName">http://example.org/def/base#cousineName</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain http://example.org/def/base#Cousine</li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#eventDate">http://example.org/def/base#eventDate</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#Event</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#date</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#eventName">http://example.org/def/base#eventName</a>
+<ul>
+<li>Added: Domain http://example.org/def/base#Event</li>
+<li>Added: Domain </li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#eventType">http://example.org/def/base#eventType</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#Event</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#hotelName">http://example.org/def/base#hotelName</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#Hotel</li>
+<li>Added: Domain http://www.owl-ontologies.com/dbo#Hotel</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#hotelNightPrice">http://example.org/def/base#hotelNightPrice</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#float</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain http://www.owl-ontologies.com/dbo#Hotel</li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#Hotel</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#hotelStars">http://example.org/def/base#hotelStars</a>
+<ul>
+<li>Added: Domain http://example.org/def/base#Hotel</li>
+<li>Added: Domain http://www.owl-ontologies.com/dbo#Hotel</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#integer</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#hotelType">http://example.org/def/base#hotelType</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain http://www.owl-ontologies.com/dbo#Hotel</li>
+<li>Added: Domain http://example.org/def/base#Hotel</li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#rating">http://example.org/def/base#rating</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#integer</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#Review</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#restaurantAvgPrice">http://example.org/def/base#restaurantAvgPrice</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#float</li>
+<li>Added: Domain http://example.org/def/base#Restaurant</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#restaurantName">http://example.org/def/base#restaurantName</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#Restaurant</li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#transportAvgPrice">http://example.org/def/base#transportAvgPrice</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#float</li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#Transport</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#transportProvider">http://example.org/def/base#transportProvider</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#Transport</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#http://example.org/def/base#transportType">http://example.org/def/base#transportType</a>
+<ul>
+<li>Added: Domain </li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain </li>
+<li>Added: Domain http://example.org/def/base#Transport</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted data properties</u></summary>
+<ul><li><a href="#foundedIn">https://w3id.org/example#foundedIn</a>
+</li>
+</ul></details></div>
 </div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
